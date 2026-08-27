@@ -1,0 +1,1753 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@11.17.0
+2 info using node@v24.19.0
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/hazael/Desktop/uniswap/.npmrc
+5 silly config load:file:/Users/hazael/.npmrc
+6 silly config load:file:/usr/local/etc/npmrc
+7 verbose title npm install prisma@5 @prisma/client@5
+8 verbose argv "install" "--legacy-peer-deps" "prisma@5" "@prisma/client@5"
+9 verbose logfile logs-max:10 dir:/Users/hazael/Desktop/uniswap/.npm_cache/_logs/2026-08-27T22_25_51_023Z-
+10 verbose logfile /Users/hazael/Desktop/uniswap/.npm_cache/_logs/2026-08-27T22_25_51_023Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:4496293888 maxSize:1124073472 maxEntrySize:562036736
+13 silly idealTree buildDeps
+14 silly fetch manifest @prisma/client@5
+15 silly packumentCache full:https://registry.npmjs.org/@prisma%2fclient cache-miss
+16 http cache https://registry.npmjs.org/@prisma%2fclient 127ms (cache hit)
+17 silly packumentCache full:https://registry.npmjs.org/@prisma%2fclient set size:68470281 disposed:false
+18 silly fetch manifest prisma@5
+19 silly packumentCache full:https://registry.npmjs.org/prisma cache-miss
+20 http cache https://registry.npmjs.org/prisma 49ms (cache hit)
+21 silly packumentCache full:https://registry.npmjs.org/prisma set size:43788728 disposed:false
+22 silly placeDep ROOT @prisma/client@5.22.0 REPLACE for: app-temp@0.1.0 want: 5
+23 silly placeDep ROOT prisma@5.22.0 REPLACE for: app-temp@0.1.0 want: 5
+24 silly fetch manifest @prisma/engines@5.22.0
+25 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines cache-miss
+26 silly fetch manifest fsevents@2.3.3
+27 silly packumentCache full:https://registry.npmjs.org/fsevents cache-miss
+28 http fetch GET 200 https://registry.npmjs.org/fsevents 86ms (cache miss)
+29 silly packumentCache full:https://registry.npmjs.org/fsevents set size:undefined disposed:false
+30 http fetch GET 200 https://registry.npmjs.org/@prisma%2fengines 489ms (cache miss)
+31 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines set size:undefined disposed:false
+32 silly placeDep ROOT @prisma/engines@5.22.0 OK for: prisma@5.22.0 want: 5.22.0
+33 silly placeDep ROOT fsevents@2.3.3 OK for: prisma@5.22.0 want: 2.3.3
+34 silly fetch manifest @prisma/debug@5.22.0
+35 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug cache-miss
+36 silly fetch manifest @prisma/fetch-engine@5.22.0
+37 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine cache-miss
+38 silly fetch manifest @prisma/get-platform@5.22.0
+39 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform cache-miss
+40 silly fetch manifest @prisma/engines-version@5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2
+41 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version cache-miss
+42 http cache https://registry.npmjs.org/@prisma%2fdebug 33ms (cache hit)
+43 silly packumentCache full:https://registry.npmjs.org/@prisma%2fdebug set size:28933466 disposed:false
+44 http cache https://registry.npmjs.org/@prisma%2fget-platform 116ms (cache hit)
+45 silly packumentCache full:https://registry.npmjs.org/@prisma%2fget-platform set size:28606669 disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/@prisma%2fengines-version 290ms (cache miss)
+47 silly packumentCache full:https://registry.npmjs.org/@prisma%2fengines-version set size:undefined disposed:false
+48 http fetch GET 200 https://registry.npmjs.org/@prisma%2ffetch-engine 662ms (cache miss)
+49 silly packumentCache full:https://registry.npmjs.org/@prisma%2ffetch-engine set size:undefined disposed:false
+50 silly placeDep ROOT @prisma/debug@5.22.0 OK for: @prisma/engines@5.22.0 want: 5.22.0
+51 silly placeDep ROOT @prisma/engines-version@5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2 OK for: @prisma/engines@5.22.0 want: 5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2
+52 silly placeDep ROOT @prisma/fetch-engine@5.22.0 OK for: @prisma/engines@5.22.0 want: 5.22.0
+53 silly placeDep ROOT @prisma/get-platform@5.22.0 OK for: @prisma/engines@5.22.0 want: 5.22.0
+54 silly reify mark retired [
+54 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@alcalzone/ansi-tokenize'
+54 silly reify ]
+55 silly reify mark retired [
+55 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/cloudflare-runtime'
+55 silly reify ]
+56 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/floci' ]
+57 silly reify mark retired [
+57 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/node-utils'
+57 silly reify ]
+58 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@ark/schema' ]
+59 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@ark/util' ]
+60 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@aws-crypto/crc32' ]
+61 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@aws-crypto/util' ]
+62 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/core' ]
+63 silly reify mark retired [
+63 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-cognito-identity'
+63 silly reify ]
+64 silly reify mark retired [
+64 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-env'
+64 silly reify ]
+65 silly reify mark retired [
+65 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-http'
+65 silly reify ]
+66 silly reify mark retired [
+66 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-ini'
+66 silly reify ]
+67 silly reify mark retired [
+67 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-login'
+67 silly reify ]
+68 silly reify mark retired [
+68 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-node'
+68 silly reify ]
+69 silly reify mark retired [
+69 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-process'
+69 silly reify ]
+70 silly reify mark retired [
+70 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-sso'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-web-identity'
+71 silly reify ]
+72 silly reify mark retired [
+72 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-providers'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/nested-clients'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/signature-v4-multi-region'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/token-providers'
+75 silly reify ]
+76 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/types' ]
+77 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/xml-builder' ]
+78 silly reify mark retired [
+78 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws/lambda-invoke-store'
+78 silly reify ]
+79 silly reify mark retired [
+79 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/cst-dts-gen'
+79 silly reify ]
+80 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/gast' ]
+81 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/types' ]
+82 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/utils' ]
+83 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@clack/core' ]
+84 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@clack/prompts' ]
+85 silly reify mark retired [
+85 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/unenv-preset'
+85 silly reify ]
+86 silly reify mark retired [
+86 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/workerd-darwin-arm64'
+86 silly reify ]
+87 silly reify mark retired [
+87 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/workers-types'
+87 silly reify ]
+88 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/aws' ]
+89 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/axiom' ]
+90 silly reify mark retired [
+90 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/cloudflare'
+90 silly reify ]
+91 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/core' ]
+92 silly reify mark retired [
+92 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/fly-io'
+92 silly reify ]
+93 silly reify mark retired [
+93 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/hetzner'
+93 silly reify ]
+94 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/neon' ]
+95 silly reify mark retired [
+95 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/planetscale'
+95 silly reify ]
+96 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@effect/sql-d1' ]
+97 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@effect/sql-sqlite-do' ]
+98 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@effect/vitest' ]
+99 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/pglite' ]
+100 silly reify mark retired [
+100 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/pglite-socket',
+100 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/pglite-server'
+100 silly reify ]
+101 silly reify mark retired [
+101 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/pglite-tools'
+101 silly reify ]
+102 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@esbuild/darwin-arm64' ]
+103 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@hono/node-server' ]
+104 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@isaacs/fs-minipass' ]
+105 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@libsql/client' ]
+106 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@libsql/core' ]
+107 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@libsql/darwin-arm64' ]
+108 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@libsql/hrana-client' ]
+109 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@libsql/isomorphic-ws' ]
+110 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@manypkg/tools' ]
+111 silly reify mark retired [
+111 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@mapbox/node-pre-gyp',
+111 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-pre-gyp'
+111 silly reify ]
+112 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@mrleebo/prisma-ast' ]
+113 silly reify mark retired [
+113 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@msgpackr-extract/msgpackr-extract-darwin-arm64'
+113 silly reify ]
+114 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@neon-rs/load' ]
+115 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@noble/hashes' ]
+116 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@nodable/entities' ]
+117 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/auth-token' ]
+118 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/core' ]
+119 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/endpoint' ]
+120 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/graphql' ]
+121 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/openapi-types' ]
+122 silly reify mark retired [
+122 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/openapi-webhooks-types'
+122 silly reify ]
+123 silly reify mark retired [
+123 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/plugin-paginate-rest'
+123 silly reify ]
+124 silly reify mark retired [
+124 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/plugin-request-log'
+124 silly reify ]
+125 silly reify mark retired [
+125 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/plugin-rest-endpoint-methods'
+125 silly reify ]
+126 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/request' ]
+127 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/request-error' ]
+128 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/rest' ]
+129 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/types' ]
+130 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@octokit/webhooks' ]
+131 silly reify mark retired [
+131 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/webhooks-methods'
+131 silly reify ]
+132 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@oxc-project/types' ]
+133 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/cli-engine' ]
+134 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/client' ]
+135 silly reify mark retired [
+135 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/client-runtime-utils'
+135 silly reify ]
+136 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/composer' ]
+137 silly reify mark retired [
+137 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/composer-cli',
+137 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/prisma-composer'
+137 silly reify ]
+138 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/compute-sdk' ]
+139 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/debug' ]
+140 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/dev' ]
+141 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/get-platform' ]
+142 silly reify mark retired [
+142 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/management-api-sdk'
+142 silly reify ]
+143 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/orm-framework' ]
+144 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@prisma/orm-toolchain' ]
+145 silly reify mark retired [
+145 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/query-plan-executor'
+145 silly reify ]
+146 silly reify mark retired [
+146 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@puppeteer/browsers',
+146 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/browsers'
+146 silly reify ]
+147 silly reify mark retired [
+147 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@rolldown/binding-darwin-arm64'
+147 silly reify ]
+148 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@rolldown/pluginutils' ]
+149 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@rollup/pluginutils' ]
+150 silly reify mark retired [
+150 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@sec-ant/readable-stream'
+150 silly reify ]
+151 silly reify mark retired [
+151 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@sindresorhus/merge-streams'
+151 silly reify ]
+152 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@smithy/core' ]
+153 silly reify mark retired [
+153 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/credential-provider-imds'
+153 silly reify ]
+154 silly reify mark retired [
+154 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/fetch-http-handler'
+154 silly reify ]
+155 silly reify mark retired [
+155 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/is-array-buffer'
+155 silly reify ]
+156 silly reify mark retired [
+156 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/node-config-provider'
+156 silly reify ]
+157 silly reify mark retired [
+157 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/node-http-handler'
+157 silly reify ]
+158 silly reify mark retired [
+158 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/shared-ini-file-loader'
+158 silly reify ]
+159 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@smithy/signature-v4' ]
+160 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@smithy/types' ]
+161 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@smithy/util-base64' ]
+162 silly reify mark retired [
+162 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/util-buffer-from'
+162 silly reify ]
+163 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@smithy/util-utf8' ]
+164 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@standard-schema/spec' ]
+165 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@stricli/core' ]
+166 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@types/aws-lambda' ]
+167 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@types/ws' ]
+168 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/@vercel/detect-agent' ]
+169 silly reify mark retired [
+169 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@vercel/nft',
+169 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/nft'
+169 silly reify ]
+170 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/abbrev' ]
+171 silly reify mark retired [
+171 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/acorn-import-attributes'
+171 silly reify ]
+172 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/agent-base' ]
+173 silly reify mark retired [
+173 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/alchemy',
+173 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/alchemy'
+173 silly reify ]
+174 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/ansi-escapes' ]
+175 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/ansi-regex' ]
+176 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/anynum' ]
+177 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/arkregex' ]
+178 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/arktype' ]
+179 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/async-sema' ]
+180 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/auto-bind' ]
+181 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/aws4fetch' ]
+182 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/b4a' ]
+183 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bare-events' ]
+184 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bare-fs' ]
+185 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bare-path' ]
+186 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bare-stream' ]
+187 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bare-url' ]
+188 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/before-after-hook' ]
+189 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/better-result' ]
+190 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bindings' ]
+191 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bowser' ]
+192 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/bundle-name' ]
+193 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/c12' ]
+194 silly reify mark retired [
+194 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/capnp-es',
+194 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnp-es',
+194 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnpc-dts',
+194 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnpc-js',
+194 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnpc-ts'
+194 silly reify ]
+195 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/capnweb' ]
+196 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/chevrotain' ]
+197 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/chokidar' ]
+198 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/chownr' ]
+199 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/ci-info' ]
+200 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/cli-boxes' ]
+201 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/cli-cursor' ]
+202 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/cli-truncate' ]
+203 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/clipanion' ]
+204 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/cliui' ]
+205 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/closest-match' ]
+206 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/code-excerpt' ]
+207 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/colorette' ]
+208 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/confbox' ]
+209 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/consola' ]
+210 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/content-type' ]
+211 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/convert-to-spaces' ]
+212 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/core-util-is' ]
+213 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/default-browser' ]
+214 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/default-browser-id' ]
+215 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/define-lazy-prop' ]
+216 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/defu' ]
+217 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/destr' ]
+218 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/dotenv' ]
+219 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/effect' ]
+220 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/environment' ]
+221 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/es-toolkit' ]
+222 silly reify mark retired [
+222 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/esbuild',
+222 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/esbuild'
+222 silly reify ]
+223 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/estree-walker' ]
+224 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/events-universal' ]
+225 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/execa' ]
+226 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/exsolve' ]
+227 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/fast-check' ]
+228 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/fast-fifo' ]
+229 silly reify mark retired [
+229 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-string-truncated-width'
+229 silly reify ]
+230 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/fast-string-width' ]
+231 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/fast-wrap-ansi' ]
+232 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/fast-xml-builder' ]
+233 silly reify mark retired [
+233 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-xml-parser',
+233 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/fxparser'
+233 silly reify ]
+234 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/figures' ]
+235 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/file-uri-to-path' ]
+236 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/foreground-child' ]
+237 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/get-caller-file' ]
+238 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/get-east-asian-width' ]
+239 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/get-port-please' ]
+240 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/get-stream' ]
+241 silly reify mark retired [
+241 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/giget',
+241 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/giget'
+241 silly reify ]
+242 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/glob' ]
+243 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/grammex' ]
+244 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/graphmatch' ]
+245 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/hono' ]
+246 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/http-status-codes' ]
+247 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/https-proxy-agent' ]
+248 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/human-signals' ]
+249 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/immediate' ]
+250 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/indent-string' ]
+251 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/inherits' ]
+252 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/ink' ]
+253 silly reify mark retired [
+253 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-docker',
+253 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/is-docker'
+253 silly reify ]
+254 silly reify mark retired [
+254 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-fullwidth-code-point'
+254 silly reify ]
+255 silly reify mark retired [
+255 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-in-ci',
+255 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/is-in-ci'
+255 silly reify ]
+256 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/is-in-ssh' ]
+257 silly reify mark retired [
+257 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-inside-container',
+257 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/is-inside-container'
+257 silly reify ]
+258 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/is-plain-obj' ]
+259 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/is-stream' ]
+260 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/is-unicode-supported' ]
+261 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/is-unsafe' ]
+262 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/is-wsl' ]
+263 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/jju' ]
+264 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/js-base64' ]
+265 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/json-with-bigint' ]
+266 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/jsonc-parser' ]
+267 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/jszip' ]
+268 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/libsodium' ]
+269 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/libsodium-wrappers' ]
+270 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/libsql' ]
+271 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/lie' ]
+272 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/lilconfig' ]
+273 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/lodash' ]
+274 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/magicast' ]
+275 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/mimic-fn' ]
+276 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/minipass' ]
+277 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/minizlib' ]
+278 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/modern-tar' ]
+279 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/msgpackr' ]
+280 silly reify mark retired [
+280 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/msgpackr-extract',
+280 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/download-msgpackr-prebuilds'
+280 silly reify ]
+281 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/node-fetch' ]
+282 silly reify mark retired [
+282 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/node-gyp-build',
+282 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build',
+282 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional',
+282 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-test'
+282 silly reify ]
+283 silly reify mark retired [
+283 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/node-gyp-build-optional-packages',
+283 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional-packages',
+283 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional-packages-optional',
+283 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional-packages-test'
+283 silly reify ]
+284 silly reify mark retired [
+284 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/nopt',
+284 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/nopt'
+284 silly reify ]
+285 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/npm-run-path' ]
+286 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/ohash' ]
+287 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/onetime' ]
+288 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/open' ]
+289 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/openapi-fetch' ]
+290 silly reify mark retired [
+290 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/openapi-typescript-helpers'
+290 silly reify ]
+291 silly reify mark retired [
+291 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/package-manager-detector'
+291 silly reify ]
+292 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/pako' ]
+293 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/parse-ms' ]
+294 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/patch-console' ]
+295 silly reify mark retired [
+295 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/path-expression-matcher'
+295 silly reify ]
+296 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/path-scurry' ]
+297 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/pathe' ]
+298 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/pend' ]
+299 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/perfect-debounce' ]
+300 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/pkg-types' ]
+301 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/powershell-utils' ]
+302 silly reify mark retired [
+302 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/prettier',
+302 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/prettier'
+302 silly reify ]
+303 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/pretty-ms' ]
+304 silly reify mark retired [
+304 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/prisma',
+304 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/prisma'
+304 silly reify ]
+305 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/process-nextick-args' ]
+306 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/promise-limit' ]
+307 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/proper-lockfile' ]
+308 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/pure-rand' ]
+309 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/rc9' ]
+310 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/react-reconciler' ]
+311 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/readable-stream' ]
+312 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/readdirp' ]
+313 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/regexp-to-ast' ]
+314 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/remeda' ]
+315 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/restore-cursor' ]
+316 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/retry' ]
+317 silly reify mark retired [
+317 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/rolldown',
+317 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/rolldown'
+317 silly reify ]
+318 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/run-applescript' ]
+319 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/safe-buffer' ]
+320 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/setimmediate' ]
+321 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/signal-exit' ]
+322 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/sisteransi' ]
+323 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/slice-ansi' ]
+324 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/stack-utils' ]
+325 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/std-env' ]
+326 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/streamx' ]
+327 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/string_decoder' ]
+328 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/string-width' ]
+329 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/strip-ansi' ]
+330 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/strip-final-newline' ]
+331 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/strnum' ]
+332 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/tagged-tag' ]
+333 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/tar' ]
+334 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/tar-stream' ]
+335 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/teex' ]
+336 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/terminal-size' ]
+337 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/text-decoder' ]
+338 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/tiny-invariant' ]
+339 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/tr46' ]
+340 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/typanion' ]
+341 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/type-fest' ]
+342 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/undici' ]
+343 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/unenv' ]
+344 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/unicorn-magic' ]
+345 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/uniku' ]
+346 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/universal-user-agent' ]
+347 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/util-deprecate' ]
+348 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/valibot' ]
+349 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/vscode-jsonrpc' ]
+350 silly reify mark retired [
+350 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver',
+350 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/installServerIntoExtension'
+350 silly reify ]
+351 silly reify mark retired [
+351 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver-protocol'
+351 silly reify ]
+352 silly reify mark retired [
+352 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver-textdocument'
+352 silly reify ]
+353 silly reify mark retired [
+353 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver-types'
+353 silly reify ]
+354 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/webidl-conversions' ]
+355 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/whatwg-url' ]
+356 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/widest-line' ]
+357 silly reify mark retired [
+357 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/workerd',
+357 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/workerd'
+357 silly reify ]
+358 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/wrap-ansi' ]
+359 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/ws' ]
+360 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/wsl-utils' ]
+361 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/xml-naming' ]
+362 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/y18n' ]
+363 silly reify mark retired [
+363 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/yaml',
+363 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/yaml'
+363 silly reify ]
+364 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/yargs' ]
+365 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/yargs-parser' ]
+366 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/yauzl' ]
+367 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/yoctocolors' ]
+368 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/yoga-layout' ]
+369 silly reify mark retired [ '/Users/hazael/Desktop/uniswap/node_modules/zeptomatch' ]
+370 silly reify moves {
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@alcalzone/ansi-tokenize': '/Users/hazael/Desktop/uniswap/node_modules/@alcalzone/.ansi-tokenize-nfyr2RgS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/cloudflare-runtime': '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/.cloudflare-runtime-rui2iYkx',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/floci': '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/.floci-3TrJgekx',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/node-utils': '/Users/hazael/Desktop/uniswap/node_modules/@alchemy.run/.node-utils-33znR8le',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@ark/schema': '/Users/hazael/Desktop/uniswap/node_modules/@ark/.schema-nd6qfmgA',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@ark/util': '/Users/hazael/Desktop/uniswap/node_modules/@ark/.util-l2hHluO7',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-crypto/crc32': '/Users/hazael/Desktop/uniswap/node_modules/@aws-crypto/.crc32-goSCAL9Z',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-crypto/util': '/Users/hazael/Desktop/uniswap/node_modules/@aws-crypto/.util-rFyF50yW',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/core': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.core-1DKF27MC',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-cognito-identity': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-cognito-identity-hLYE1VEj',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-env': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-env-Nox1XMaf',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-http': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-http-Nz8j4VN0',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-ini': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-ini-zGO0CbRn',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-login': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-login-uIIkPzs8',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-node': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-node-W7qmlFI8',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-process': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-process-xbm3OHDc',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-sso': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-sso-u499zETb',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-provider-web-identity': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-provider-web-identity-u4hafVbc',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/credential-providers': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.credential-providers-aMNSN43V',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/nested-clients': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.nested-clients-FUu3TRoF',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/signature-v4-multi-region': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.signature-v4-multi-region-n1v2zGAS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/token-providers': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.token-providers-Z27Ng5Uy',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/types': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.types-uL6YA12V',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/xml-builder': '/Users/hazael/Desktop/uniswap/node_modules/@aws-sdk/.xml-builder-Gsc21Ldk',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@aws/lambda-invoke-store': '/Users/hazael/Desktop/uniswap/node_modules/@aws/.lambda-invoke-store-4oNl7SSJ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/cst-dts-gen': '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/.cst-dts-gen-vzgNZNA2',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/gast': '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/.gast-RGpmHuH5',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/types': '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/.types-FmtXcj3G',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/utils': '/Users/hazael/Desktop/uniswap/node_modules/@chevrotain/.utils-PoK5oeCi',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@clack/core': '/Users/hazael/Desktop/uniswap/node_modules/@clack/.core-HvjWmgEO',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@clack/prompts': '/Users/hazael/Desktop/uniswap/node_modules/@clack/.prompts-shlpoFii',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/unenv-preset': '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/.unenv-preset-wYUVfteW',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/workerd-darwin-arm64': '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/.workerd-darwin-arm64-yAXKrueu',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/workers-types': '/Users/hazael/Desktop/uniswap/node_modules/@cloudflare/.workers-types-sgGGceUy',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/aws': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.aws-NeOyGHc4',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/axiom': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.axiom-LoRyi3eZ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/cloudflare': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.cloudflare-o6sthOsy',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/core': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.core-ZCx9MLmT',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/fly-io': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.fly-io-S00dMO3A',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/hetzner': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.hetzner-Fyd4B9rh',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/neon': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.neon-6zqVtvPH',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/planetscale': '/Users/hazael/Desktop/uniswap/node_modules/@distilled.cloud/.planetscale-jdrJ2fTo',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@effect/sql-d1': '/Users/hazael/Desktop/uniswap/node_modules/@effect/.sql-d1-yWhdwLTN',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@effect/sql-sqlite-do': '/Users/hazael/Desktop/uniswap/node_modules/@effect/.sql-sqlite-do-CaLtMkiR',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@effect/vitest': '/Users/hazael/Desktop/uniswap/node_modules/@effect/.vitest-Al1Fkz8G',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/pglite': '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/.pglite-pTYm4xTB',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/pglite-socket': '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/.pglite-socket-GDzaT9Ei',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/pglite-server': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.pglite-server-IrbSPDwT',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/pglite-tools': '/Users/hazael/Desktop/uniswap/node_modules/@electric-sql/.pglite-tools-gR6Epc0t',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@esbuild/darwin-arm64': '/Users/hazael/Desktop/uniswap/node_modules/@esbuild/.darwin-arm64-QvMvLjZz',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@hono/node-server': '/Users/hazael/Desktop/uniswap/node_modules/@hono/.node-server-vV8UCBWs',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@isaacs/fs-minipass': '/Users/hazael/Desktop/uniswap/node_modules/@isaacs/.fs-minipass-DZhtKMEQ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@libsql/client': '/Users/hazael/Desktop/uniswap/node_modules/@libsql/.client-TsvnMzPP',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@libsql/core': '/Users/hazael/Desktop/uniswap/node_modules/@libsql/.core-QoGLEtj1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@libsql/darwin-arm64': '/Users/hazael/Desktop/uniswap/node_modules/@libsql/.darwin-arm64-YY1em4TS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@libsql/hrana-client': '/Users/hazael/Desktop/uniswap/node_modules/@libsql/.hrana-client-4vQtlLYH',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@libsql/isomorphic-ws': '/Users/hazael/Desktop/uniswap/node_modules/@libsql/.isomorphic-ws-MEXrFG9g',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@manypkg/tools': '/Users/hazael/Desktop/uniswap/node_modules/@manypkg/.tools-pVUzOxl2',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@mapbox/node-pre-gyp': '/Users/hazael/Desktop/uniswap/node_modules/@mapbox/.node-pre-gyp-ReWVsNVJ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-pre-gyp': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.node-pre-gyp-uMeBUAEX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@mrleebo/prisma-ast': '/Users/hazael/Desktop/uniswap/node_modules/@mrleebo/.prisma-ast-RopZFw4l',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@msgpackr-extract/msgpackr-extract-darwin-arm64': '/Users/hazael/Desktop/uniswap/node_modules/@msgpackr-extract/.msgpackr-extract-darwin-arm64-HonYZ7ix',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@neon-rs/load': '/Users/hazael/Desktop/uniswap/node_modules/@neon-rs/.load-5XALB6Qr',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@noble/hashes': '/Users/hazael/Desktop/uniswap/node_modules/@noble/.hashes-DoILz1Hx',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@nodable/entities': '/Users/hazael/Desktop/uniswap/node_modules/@nodable/.entities-PkIXEe2r',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/auth-token': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.auth-token-yIA2vgRm',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/core': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.core-iBiK95MU',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/endpoint': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.endpoint-jztE4HMC',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/graphql': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.graphql-S8Wcrejy',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/openapi-types': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.openapi-types-gjmNFKZ4',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/openapi-webhooks-types': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.openapi-webhooks-types-DuSMX760',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/plugin-paginate-rest': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.plugin-paginate-rest-vAiFEFny',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/plugin-request-log': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.plugin-request-log-yQcqFQET',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/plugin-rest-endpoint-methods': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.plugin-rest-endpoint-methods-P0Tx16ST',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/request': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.request-V8i4j9lp',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/request-error': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.request-error-oge9e2mu',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/rest': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.rest-jkEdklDQ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/types': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.types-dG9xWQEA',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/webhooks': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.webhooks-LifM1bfr',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@octokit/webhooks-methods': '/Users/hazael/Desktop/uniswap/node_modules/@octokit/.webhooks-methods-1W3xrNOb',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@oxc-project/types': '/Users/hazael/Desktop/uniswap/node_modules/@oxc-project/.types-3Z3q9PA5',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/cli-engine': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.cli-engine-NQJnBk0a',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/client': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.client-8HJGW11k',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/client-runtime-utils': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.client-runtime-utils-AAfXO3h1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/composer': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.composer-QZMwqPRy',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/composer-cli': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.composer-cli-x6s0Izfo',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/prisma-composer': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.prisma-composer-9tD4tfZi',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/compute-sdk': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.compute-sdk-rjw0SbqV',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/debug': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.debug-zuQZD5EU',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/dev': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.dev-yXkF9YOO',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/get-platform': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.get-platform-y1h4MaKH',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/management-api-sdk': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.management-api-sdk-WNlnQtQi',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/orm-framework': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.orm-framework-hNL8dy64',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/orm-toolchain': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.orm-toolchain-tpNeP5Ja',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@prisma/query-plan-executor': '/Users/hazael/Desktop/uniswap/node_modules/@prisma/.query-plan-executor-RusgC4hS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@puppeteer/browsers': '/Users/hazael/Desktop/uniswap/node_modules/@puppeteer/.browsers-LzlhcDI3',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/browsers': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.browsers-cbZv3PmH',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@rolldown/binding-darwin-arm64': '/Users/hazael/Desktop/uniswap/node_modules/@rolldown/.binding-darwin-arm64-Z5QQPg2P',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@rolldown/pluginutils': '/Users/hazael/Desktop/uniswap/node_modules/@rolldown/.pluginutils-0rJOCO6o',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@rollup/pluginutils': '/Users/hazael/Desktop/uniswap/node_modules/@rollup/.pluginutils-GLbAQaSq',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@sec-ant/readable-stream': '/Users/hazael/Desktop/uniswap/node_modules/@sec-ant/.readable-stream-oMiIKCGW',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@sindresorhus/merge-streams': '/Users/hazael/Desktop/uniswap/node_modules/@sindresorhus/.merge-streams-tDuaYdeQ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/core': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.core-Wodea5Wt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/credential-provider-imds': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.credential-provider-imds-LSZFfWZD',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/fetch-http-handler': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.fetch-http-handler-Bq5XZ8c1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/is-array-buffer': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.is-array-buffer-FGr4I8y6',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/node-config-provider': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.node-config-provider-A0PT4i4R',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/node-http-handler': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.node-http-handler-ZOiac1OX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/shared-ini-file-loader': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.shared-ini-file-loader-WZNhscnn',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/signature-v4': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.signature-v4-TcrMgUu2',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/types': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.types-saHKvm65',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/util-base64': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.util-base64-JL1F2jyI',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/util-buffer-from': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.util-buffer-from-Yh60J53c',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@smithy/util-utf8': '/Users/hazael/Desktop/uniswap/node_modules/@smithy/.util-utf8-86GiLH6S',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@standard-schema/spec': '/Users/hazael/Desktop/uniswap/node_modules/@standard-schema/.spec-0evKvXWA',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@stricli/core': '/Users/hazael/Desktop/uniswap/node_modules/@stricli/.core-EdnVE5Gt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@types/aws-lambda': '/Users/hazael/Desktop/uniswap/node_modules/@types/.aws-lambda-0DJNHH0C',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@types/ws': '/Users/hazael/Desktop/uniswap/node_modules/@types/.ws-NNf1YI8i',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@vercel/detect-agent': '/Users/hazael/Desktop/uniswap/node_modules/@vercel/.detect-agent-eZJkzCMA',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/@vercel/nft': '/Users/hazael/Desktop/uniswap/node_modules/@vercel/.nft-N3UJRrsv',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/nft': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.nft-fVslAwY1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/abbrev': '/Users/hazael/Desktop/uniswap/node_modules/.abbrev-i0gWh7ny',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/acorn-import-attributes': '/Users/hazael/Desktop/uniswap/node_modules/.acorn-import-attributes-i9oDbzGh',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/agent-base': '/Users/hazael/Desktop/uniswap/node_modules/.agent-base-9Uoimmxr',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/alchemy': '/Users/hazael/Desktop/uniswap/node_modules/.alchemy-QGGhK0du',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/alchemy': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.alchemy-iOcSw17m',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/ansi-escapes': '/Users/hazael/Desktop/uniswap/node_modules/.ansi-escapes-Newkh2Eb',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/ansi-regex': '/Users/hazael/Desktop/uniswap/node_modules/.ansi-regex-dOBsLooX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/anynum': '/Users/hazael/Desktop/uniswap/node_modules/.anynum-uWzrVqx3',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/arkregex': '/Users/hazael/Desktop/uniswap/node_modules/.arkregex-Zb7wU0vr',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/arktype': '/Users/hazael/Desktop/uniswap/node_modules/.arktype-BOrEkgwM',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/async-sema': '/Users/hazael/Desktop/uniswap/node_modules/.async-sema-BHME3Mxi',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/auto-bind': '/Users/hazael/Desktop/uniswap/node_modules/.auto-bind-ZwBh1UFU',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/aws4fetch': '/Users/hazael/Desktop/uniswap/node_modules/.aws4fetch-gmPf9iy8',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/b4a': '/Users/hazael/Desktop/uniswap/node_modules/.b4a-wflWX4Je',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bare-events': '/Users/hazael/Desktop/uniswap/node_modules/.bare-events-Il6aP4eR',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bare-fs': '/Users/hazael/Desktop/uniswap/node_modules/.bare-fs-Urm6CybK',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bare-path': '/Users/hazael/Desktop/uniswap/node_modules/.bare-path-JbLpwlJD',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bare-stream': '/Users/hazael/Desktop/uniswap/node_modules/.bare-stream-8xcQONyS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bare-url': '/Users/hazael/Desktop/uniswap/node_modules/.bare-url-CKC36yCY',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/before-after-hook': '/Users/hazael/Desktop/uniswap/node_modules/.before-after-hook-Ge4WB9In',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/better-result': '/Users/hazael/Desktop/uniswap/node_modules/.better-result-Q2aiXhKJ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bindings': '/Users/hazael/Desktop/uniswap/node_modules/.bindings-goSbQ4F7',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bowser': '/Users/hazael/Desktop/uniswap/node_modules/.bowser-5lspgF54',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/bundle-name': '/Users/hazael/Desktop/uniswap/node_modules/.bundle-name-hZ1KJsil',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/c12': '/Users/hazael/Desktop/uniswap/node_modules/.c12-nfL445Ut',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/capnp-es': '/Users/hazael/Desktop/uniswap/node_modules/.capnp-es-cEURTIM1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnp-es': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.capnp-es-htu1euVz',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnpc-dts': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.capnpc-dts-ftGYfDpO',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnpc-js': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.capnpc-js-plS8GS6P',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/capnpc-ts': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.capnpc-ts-glShiK9l',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/capnweb': '/Users/hazael/Desktop/uniswap/node_modules/.capnweb-5wHqvcpP',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/chevrotain': '/Users/hazael/Desktop/uniswap/node_modules/.chevrotain-3jZxaldG',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/chokidar': '/Users/hazael/Desktop/uniswap/node_modules/.chokidar-yWN8Wp5o',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/chownr': '/Users/hazael/Desktop/uniswap/node_modules/.chownr-25Qzj8GO',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/ci-info': '/Users/hazael/Desktop/uniswap/node_modules/.ci-info-2cVwfrmp',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/cli-boxes': '/Users/hazael/Desktop/uniswap/node_modules/.cli-boxes-AkGB5uNL',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/cli-cursor': '/Users/hazael/Desktop/uniswap/node_modules/.cli-cursor-oEGYBk5w',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/cli-truncate': '/Users/hazael/Desktop/uniswap/node_modules/.cli-truncate-I4SCa1Pt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/clipanion': '/Users/hazael/Desktop/uniswap/node_modules/.clipanion-hdbNkqll',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/cliui': '/Users/hazael/Desktop/uniswap/node_modules/.cliui-ixy9zjF5',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/closest-match': '/Users/hazael/Desktop/uniswap/node_modules/.closest-match-qZPqZ8o7',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/code-excerpt': '/Users/hazael/Desktop/uniswap/node_modules/.code-excerpt-iyHI4cYi',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/colorette': '/Users/hazael/Desktop/uniswap/node_modules/.colorette-IMRQV9wK',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/confbox': '/Users/hazael/Desktop/uniswap/node_modules/.confbox-6aMsl7Y9',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/consola': '/Users/hazael/Desktop/uniswap/node_modules/.consola-yTWbYqxS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/content-type': '/Users/hazael/Desktop/uniswap/node_modules/.content-type-7vkGZaTK',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/convert-to-spaces': '/Users/hazael/Desktop/uniswap/node_modules/.convert-to-spaces-lqNzvBDt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/core-util-is': '/Users/hazael/Desktop/uniswap/node_modules/.core-util-is-QK7WCzgm',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/default-browser': '/Users/hazael/Desktop/uniswap/node_modules/.default-browser-T76V9R8r',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/default-browser-id': '/Users/hazael/Desktop/uniswap/node_modules/.default-browser-id-xL4rJFAX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/define-lazy-prop': '/Users/hazael/Desktop/uniswap/node_modules/.define-lazy-prop-e9d8Rese',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/defu': '/Users/hazael/Desktop/uniswap/node_modules/.defu-OtY5a9pM',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/destr': '/Users/hazael/Desktop/uniswap/node_modules/.destr-vtKC1PVY',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/dotenv': '/Users/hazael/Desktop/uniswap/node_modules/.dotenv-xNNq5luq',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/effect': '/Users/hazael/Desktop/uniswap/node_modules/.effect-KG2TeLnM',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/environment': '/Users/hazael/Desktop/uniswap/node_modules/.environment-4bXtUqKF',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/es-toolkit': '/Users/hazael/Desktop/uniswap/node_modules/.es-toolkit-IKr6AogZ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/esbuild': '/Users/hazael/Desktop/uniswap/node_modules/.esbuild-y8uYgmta',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/esbuild': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.esbuild-lccG1WPA',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/estree-walker': '/Users/hazael/Desktop/uniswap/node_modules/.estree-walker-YND480Yz',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/events-universal': '/Users/hazael/Desktop/uniswap/node_modules/.events-universal-27YMCqFV',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/execa': '/Users/hazael/Desktop/uniswap/node_modules/.execa-EnJ7VexQ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/exsolve': '/Users/hazael/Desktop/uniswap/node_modules/.exsolve-sftFI0cZ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-check': '/Users/hazael/Desktop/uniswap/node_modules/.fast-check-Mh423njR',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-fifo': '/Users/hazael/Desktop/uniswap/node_modules/.fast-fifo-tAgn2RKg',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-string-truncated-width': '/Users/hazael/Desktop/uniswap/node_modules/.fast-string-truncated-width-g3rCm0hw',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-string-width': '/Users/hazael/Desktop/uniswap/node_modules/.fast-string-width-Etu5qyBX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-wrap-ansi': '/Users/hazael/Desktop/uniswap/node_modules/.fast-wrap-ansi-Dw349xr5',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-xml-builder': '/Users/hazael/Desktop/uniswap/node_modules/.fast-xml-builder-L6PUSGbZ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/fast-xml-parser': '/Users/hazael/Desktop/uniswap/node_modules/.fast-xml-parser-aVWjkS9L',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/fxparser': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.fxparser-uhk25cpv',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/figures': '/Users/hazael/Desktop/uniswap/node_modules/.figures-0oYj8ECn',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/file-uri-to-path': '/Users/hazael/Desktop/uniswap/node_modules/.file-uri-to-path-TBxxR19y',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/foreground-child': '/Users/hazael/Desktop/uniswap/node_modules/.foreground-child-zv9LDeym',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/get-caller-file': '/Users/hazael/Desktop/uniswap/node_modules/.get-caller-file-0ZjCLUJ4',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/get-east-asian-width': '/Users/hazael/Desktop/uniswap/node_modules/.get-east-asian-width-doE9Xkxd',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/get-port-please': '/Users/hazael/Desktop/uniswap/node_modules/.get-port-please-Rrzeibev',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/get-stream': '/Users/hazael/Desktop/uniswap/node_modules/.get-stream-zmUWSH7u',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/giget': '/Users/hazael/Desktop/uniswap/node_modules/.giget-kZidqZRo',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/giget': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.giget-JkGGgeBt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/glob': '/Users/hazael/Desktop/uniswap/node_modules/.glob-DefXlT9o',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/grammex': '/Users/hazael/Desktop/uniswap/node_modules/.grammex-nZEqwgmt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/graphmatch': '/Users/hazael/Desktop/uniswap/node_modules/.graphmatch-4IUWKypQ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/hono': '/Users/hazael/Desktop/uniswap/node_modules/.hono-6AwC8LuP',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/http-status-codes': '/Users/hazael/Desktop/uniswap/node_modules/.http-status-codes-RS9oafiQ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/https-proxy-agent': '/Users/hazael/Desktop/uniswap/node_modules/.https-proxy-agent-nIAONit5',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/human-signals': '/Users/hazael/Desktop/uniswap/node_modules/.human-signals-xi3wi3NX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/immediate': '/Users/hazael/Desktop/uniswap/node_modules/.immediate-59ixHQWL',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/indent-string': '/Users/hazael/Desktop/uniswap/node_modules/.indent-string-ZUHtRQfg',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/inherits': '/Users/hazael/Desktop/uniswap/node_modules/.inherits-ykfVjC7L',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/ink': '/Users/hazael/Desktop/uniswap/node_modules/.ink-LqSf861E',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-docker': '/Users/hazael/Desktop/uniswap/node_modules/.is-docker-uZ1wdutC',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/is-docker': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.is-docker-xiXISBwi',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-fullwidth-code-point': '/Users/hazael/Desktop/uniswap/node_modules/.is-fullwidth-code-point-M3RvUGO6',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-in-ci': '/Users/hazael/Desktop/uniswap/node_modules/.is-in-ci-j71uI7od',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/is-in-ci': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.is-in-ci-U77Pscyr',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-in-ssh': '/Users/hazael/Desktop/uniswap/node_modules/.is-in-ssh-GeG1F8K0',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-inside-container': '/Users/hazael/Desktop/uniswap/node_modules/.is-inside-container-KE1elFNt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/is-inside-container': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.is-inside-container-JmEl1oME',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-plain-obj': '/Users/hazael/Desktop/uniswap/node_modules/.is-plain-obj-TGURLMIR',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-stream': '/Users/hazael/Desktop/uniswap/node_modules/.is-stream-VS55q4n4',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-unicode-supported': '/Users/hazael/Desktop/uniswap/node_modules/.is-unicode-supported-WjBhzxNp',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-unsafe': '/Users/hazael/Desktop/uniswap/node_modules/.is-unsafe-z2gaQefC',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/is-wsl': '/Users/hazael/Desktop/uniswap/node_modules/.is-wsl-RYjYCEfO',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/jju': '/Users/hazael/Desktop/uniswap/node_modules/.jju-ugczYMod',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/js-base64': '/Users/hazael/Desktop/uniswap/node_modules/.js-base64-eTxZoPG1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/json-with-bigint': '/Users/hazael/Desktop/uniswap/node_modules/.json-with-bigint-1nm6UyE9',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/jsonc-parser': '/Users/hazael/Desktop/uniswap/node_modules/.jsonc-parser-C072q08B',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/jszip': '/Users/hazael/Desktop/uniswap/node_modules/.jszip-I6LEzjt6',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/libsodium': '/Users/hazael/Desktop/uniswap/node_modules/.libsodium-1aM5N58L',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/libsodium-wrappers': '/Users/hazael/Desktop/uniswap/node_modules/.libsodium-wrappers-VDOHE16P',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/libsql': '/Users/hazael/Desktop/uniswap/node_modules/.libsql-Bl6Ure6h',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/lie': '/Users/hazael/Desktop/uniswap/node_modules/.lie-LoT4iT3F',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/lilconfig': '/Users/hazael/Desktop/uniswap/node_modules/.lilconfig-uc7iZO2a',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/lodash': '/Users/hazael/Desktop/uniswap/node_modules/.lodash-lWz1J7c6',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/magicast': '/Users/hazael/Desktop/uniswap/node_modules/.magicast-mvTA9V6n',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/mimic-fn': '/Users/hazael/Desktop/uniswap/node_modules/.mimic-fn-E0xTKE0S',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/minipass': '/Users/hazael/Desktop/uniswap/node_modules/.minipass-wh7bJaoe',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/minizlib': '/Users/hazael/Desktop/uniswap/node_modules/.minizlib-T2XzO4DK',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/modern-tar': '/Users/hazael/Desktop/uniswap/node_modules/.modern-tar-xonZjw1w',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/msgpackr': '/Users/hazael/Desktop/uniswap/node_modules/.msgpackr-zDb6uxPp',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/msgpackr-extract': '/Users/hazael/Desktop/uniswap/node_modules/.msgpackr-extract-h0VNUWCt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/download-msgpackr-prebuilds': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.download-msgpackr-prebuilds-Nu6bfGgL',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/node-fetch': '/Users/hazael/Desktop/uniswap/node_modules/.node-fetch-bAeDBBTM',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/node-gyp-build': '/Users/hazael/Desktop/uniswap/node_modules/.node-gyp-build-NTepks3X',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.node-gyp-build-pHgeQ0Ls',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.node-gyp-build-optional-pl8V7cfY',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-test': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.node-gyp-build-test-CRdE0kje',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/node-gyp-build-optional-packages': '/Users/hazael/Desktop/uniswap/node_modules/.node-gyp-build-optional-packages-CFsBOsjI',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional-packages': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.node-gyp-build-optional-packages-lVvvXLA9',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional-packages-optional': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.node-gyp-build-optional-packages-optional-sSqKTWRW',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/node-gyp-build-optional-packages-test': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.node-gyp-build-optional-packages-test-fwVZE8gy',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/nopt': '/Users/hazael/Desktop/uniswap/node_modules/.nopt-IBO3djOG',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/nopt': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.nopt-o9b86BsG',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/npm-run-path': '/Users/hazael/Desktop/uniswap/node_modules/.npm-run-path-FV9iAFPf',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/ohash': '/Users/hazael/Desktop/uniswap/node_modules/.ohash-G7GPXTy6',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/onetime': '/Users/hazael/Desktop/uniswap/node_modules/.onetime-ySydGAzS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/open': '/Users/hazael/Desktop/uniswap/node_modules/.open-MzC3gyX2',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/openapi-fetch': '/Users/hazael/Desktop/uniswap/node_modules/.openapi-fetch-w2VYRUAS',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/openapi-typescript-helpers': '/Users/hazael/Desktop/uniswap/node_modules/.openapi-typescript-helpers-YAhhIrLw',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/package-manager-detector': '/Users/hazael/Desktop/uniswap/node_modules/.package-manager-detector-xlsJauYX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/pako': '/Users/hazael/Desktop/uniswap/node_modules/.pako-NS4rlDOf',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/parse-ms': '/Users/hazael/Desktop/uniswap/node_modules/.parse-ms-AsvEoonq',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/patch-console': '/Users/hazael/Desktop/uniswap/node_modules/.patch-console-X6SZorNp',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/path-expression-matcher': '/Users/hazael/Desktop/uniswap/node_modules/.path-expression-matcher-8nM7jfsW',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/path-scurry': '/Users/hazael/Desktop/uniswap/node_modules/.path-scurry-KB7QYo0w',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/pathe': '/Users/hazael/Desktop/uniswap/node_modules/.pathe-HPdwyGEX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/pend': '/Users/hazael/Desktop/uniswap/node_modules/.pend-mvs7LBJq',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/perfect-debounce': '/Users/hazael/Desktop/uniswap/node_modules/.perfect-debounce-bzdpsH8O',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/pkg-types': '/Users/hazael/Desktop/uniswap/node_modules/.pkg-types-RA5Bcxrr',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/powershell-utils': '/Users/hazael/Desktop/uniswap/node_modules/.powershell-utils-IRYbLZPs',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/prettier': '/Users/hazael/Desktop/uniswap/node_modules/.prettier-XEF253yg',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/prettier': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.prettier-XY0aOeR9',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/pretty-ms': '/Users/hazael/Desktop/uniswap/node_modules/.pretty-ms-VZgUXamz',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/prisma': '/Users/hazael/Desktop/uniswap/node_modules/.prisma-Os0CImZH',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/prisma': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.prisma-5keyV48C',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/process-nextick-args': '/Users/hazael/Desktop/uniswap/node_modules/.process-nextick-args-gIUu46d1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/promise-limit': '/Users/hazael/Desktop/uniswap/node_modules/.promise-limit-yB1xj5Cb',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/proper-lockfile': '/Users/hazael/Desktop/uniswap/node_modules/.proper-lockfile-V7TrC66R',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/pure-rand': '/Users/hazael/Desktop/uniswap/node_modules/.pure-rand-TGRrXkBK',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/rc9': '/Users/hazael/Desktop/uniswap/node_modules/.rc9-eNVTe8Th',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/react-reconciler': '/Users/hazael/Desktop/uniswap/node_modules/.react-reconciler-o5RParM5',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/readable-stream': '/Users/hazael/Desktop/uniswap/node_modules/.readable-stream-DYrvAFlD',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/readdirp': '/Users/hazael/Desktop/uniswap/node_modules/.readdirp-AVqXAJGU',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/regexp-to-ast': '/Users/hazael/Desktop/uniswap/node_modules/.regexp-to-ast-x3hObtbN',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/remeda': '/Users/hazael/Desktop/uniswap/node_modules/.remeda-v6DqC5JW',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/restore-cursor': '/Users/hazael/Desktop/uniswap/node_modules/.restore-cursor-l7iMuh6W',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/retry': '/Users/hazael/Desktop/uniswap/node_modules/.retry-BL6bDQUv',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/rolldown': '/Users/hazael/Desktop/uniswap/node_modules/.rolldown-R0ZX9klw',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/rolldown': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.rolldown-ka7kJa1P',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/run-applescript': '/Users/hazael/Desktop/uniswap/node_modules/.run-applescript-YILjWm3M',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/safe-buffer': '/Users/hazael/Desktop/uniswap/node_modules/.safe-buffer-d2ecePCq',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/setimmediate': '/Users/hazael/Desktop/uniswap/node_modules/.setimmediate-RJH6ddAf',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/signal-exit': '/Users/hazael/Desktop/uniswap/node_modules/.signal-exit-zAwvSbah',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/sisteransi': '/Users/hazael/Desktop/uniswap/node_modules/.sisteransi-5i0ptuYb',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/slice-ansi': '/Users/hazael/Desktop/uniswap/node_modules/.slice-ansi-G6oWXoBz',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/stack-utils': '/Users/hazael/Desktop/uniswap/node_modules/.stack-utils-Lq1GEWl7',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/std-env': '/Users/hazael/Desktop/uniswap/node_modules/.std-env-CDn9spX4',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/streamx': '/Users/hazael/Desktop/uniswap/node_modules/.streamx-OzHt27L3',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/string_decoder': '/Users/hazael/Desktop/uniswap/node_modules/.string_decoder-bqvmjVWr',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/string-width': '/Users/hazael/Desktop/uniswap/node_modules/.string-width-4rymOO7g',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/strip-ansi': '/Users/hazael/Desktop/uniswap/node_modules/.strip-ansi-RpN6BYmE',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/strip-final-newline': '/Users/hazael/Desktop/uniswap/node_modules/.strip-final-newline-2aPoXei2',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/strnum': '/Users/hazael/Desktop/uniswap/node_modules/.strnum-yFNhODgs',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/tagged-tag': '/Users/hazael/Desktop/uniswap/node_modules/.tagged-tag-6WcPasWN',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/tar': '/Users/hazael/Desktop/uniswap/node_modules/.tar-FJ2AOqh9',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/tar-stream': '/Users/hazael/Desktop/uniswap/node_modules/.tar-stream-wRbgqbtf',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/teex': '/Users/hazael/Desktop/uniswap/node_modules/.teex-GRlFoXGt',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/terminal-size': '/Users/hazael/Desktop/uniswap/node_modules/.terminal-size-z326mHx1',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/text-decoder': '/Users/hazael/Desktop/uniswap/node_modules/.text-decoder-PYh9Nvoj',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/tiny-invariant': '/Users/hazael/Desktop/uniswap/node_modules/.tiny-invariant-MMNIrXKR',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/tr46': '/Users/hazael/Desktop/uniswap/node_modules/.tr46-NCOl2IpR',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/typanion': '/Users/hazael/Desktop/uniswap/node_modules/.typanion-yiqgmmDg',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/type-fest': '/Users/hazael/Desktop/uniswap/node_modules/.type-fest-fblno8vX',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/undici': '/Users/hazael/Desktop/uniswap/node_modules/.undici-ekTS6fZe',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/unenv': '/Users/hazael/Desktop/uniswap/node_modules/.unenv-VGYgPHg7',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/unicorn-magic': '/Users/hazael/Desktop/uniswap/node_modules/.unicorn-magic-ZzoPra9Y',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/uniku': '/Users/hazael/Desktop/uniswap/node_modules/.uniku-2NFuku6q',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/universal-user-agent': '/Users/hazael/Desktop/uniswap/node_modules/.universal-user-agent-ZgODZKbK',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/util-deprecate': '/Users/hazael/Desktop/uniswap/node_modules/.util-deprecate-TykDtkrE',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/valibot': '/Users/hazael/Desktop/uniswap/node_modules/.valibot-CmvDKL9h',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-jsonrpc': '/Users/hazael/Desktop/uniswap/node_modules/.vscode-jsonrpc-wprtDHg3',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver': '/Users/hazael/Desktop/uniswap/node_modules/.vscode-languageserver-DC85SpYQ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/installServerIntoExtension': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.installServerIntoExtension-KwhNrq6R',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver-protocol': '/Users/hazael/Desktop/uniswap/node_modules/.vscode-languageserver-protocol-8u0pFj8I',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver-textdocument': '/Users/hazael/Desktop/uniswap/node_modules/.vscode-languageserver-textdocument-WZ258kgU',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/vscode-languageserver-types': '/Users/hazael/Desktop/uniswap/node_modules/.vscode-languageserver-types-cSFDi844',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/webidl-conversions': '/Users/hazael/Desktop/uniswap/node_modules/.webidl-conversions-Dc0bD5Ma',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/whatwg-url': '/Users/hazael/Desktop/uniswap/node_modules/.whatwg-url-f3F71TfZ',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/widest-line': '/Users/hazael/Desktop/uniswap/node_modules/.widest-line-tQ3P4tRN',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/workerd': '/Users/hazael/Desktop/uniswap/node_modules/.workerd-3tQHV3DM',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/workerd': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.workerd-lFJrWEy0',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/wrap-ansi': '/Users/hazael/Desktop/uniswap/node_modules/.wrap-ansi-fQ0V6TGV',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/ws': '/Users/hazael/Desktop/uniswap/node_modules/.ws-OqqdLKLa',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/wsl-utils': '/Users/hazael/Desktop/uniswap/node_modules/.wsl-utils-ZHUmHYBu',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/xml-naming': '/Users/hazael/Desktop/uniswap/node_modules/.xml-naming-MoY0GiZ2',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/y18n': '/Users/hazael/Desktop/uniswap/node_modules/.y18n-4Oc7URCH',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/yaml': '/Users/hazael/Desktop/uniswap/node_modules/.yaml-3HrYhGiE',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/.bin/yaml': '/Users/hazael/Desktop/uniswap/node_modules/.bin/.yaml-sz6jyUJ2',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/yargs': '/Users/hazael/Desktop/uniswap/node_modules/.yargs-1Va9vZ1N',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/yargs-parser': '/Users/hazael/Desktop/uniswap/node_modules/.yargs-parser-OiI4BCOq',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/yauzl': '/Users/hazael/Desktop/uniswap/node_modules/.yauzl-oIHg8i9D',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/yoctocolors': '/Users/hazael/Desktop/uniswap/node_modules/.yoctocolors-z1WksgAA',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/yoga-layout': '/Users/hazael/Desktop/uniswap/node_modules/.yoga-layout-ym1W7cC7',
+370 silly reify   '/Users/hazael/Desktop/uniswap/node_modules/zeptomatch': '/Users/hazael/Desktop/uniswap/node_modules/.zeptomatch-vQDUqxnY'
+370 silly reify }
+371 silly audit bulk request {
+371 silly audit   'ansi-styles': [ '4.3.0' ],
+371 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+371 silly audit   '@babel/code-frame': [ '7.29.7' ],
+371 silly audit   '@babel/compat-data': [ '7.29.7' ],
+371 silly audit   '@babel/core': [ '7.29.7' ],
+371 silly audit   '@babel/generator': [ '7.29.8' ],
+371 silly audit   '@babel/helper-compilation-targets': [ '7.29.7' ],
+371 silly audit   '@babel/helper-globals': [ '7.29.7' ],
+371 silly audit   '@babel/helper-module-imports': [ '7.29.7' ],
+371 silly audit   '@babel/helper-module-transforms': [ '7.29.7' ],
+371 silly audit   '@babel/helper-string-parser': [ '7.29.7' ],
+371 silly audit   '@babel/helper-validator-identifier': [ '7.29.7' ],
+371 silly audit   '@babel/helper-validator-option': [ '7.29.7' ],
+371 silly audit   '@babel/helpers': [ '7.29.7' ],
+371 silly audit   '@babel/parser': [ '7.29.8' ],
+371 silly audit   '@babel/runtime': [ '7.29.7' ],
+371 silly audit   '@babel/template': [ '7.29.7' ],
+371 silly audit   '@babel/traverse': [ '7.29.8' ],
+371 silly audit   '@babel/types': [ '7.29.8' ],
+371 silly audit   '@emnapi/core': [ '1.10.0' ],
+371 silly audit   '@emnapi/runtime': [ '1.11.3', '1.10.0' ],
+371 silly audit   '@emnapi/wasi-threads': [ '1.2.1' ],
+371 silly audit   '@eslint-community/eslint-utils': [ '4.10.1', '4.9.1' ],
+371 silly audit   'eslint-visitor-keys': [ '3.4.3', '5.0.1', '4.2.1' ],
+371 silly audit   '@eslint-community/regexpp': [ '4.12.2' ],
+371 silly audit   '@eslint/config-array': [ '0.21.2' ],
+371 silly audit   '@eslint/config-helpers': [ '0.4.2' ],
+371 silly audit   '@eslint/core': [ '0.17.0' ],
+371 silly audit   '@eslint/eslintrc': [ '3.3.6' ],
+371 silly audit   '@eslint/js': [ '9.39.5' ],
+371 silly audit   '@eslint/object-schema': [ '2.1.7' ],
+371 silly audit   '@eslint/plugin-kit': [ '0.4.1' ],
+371 silly audit   '@humanfs/core': [ '0.19.2' ],
+371 silly audit   '@humanfs/node': [ '0.16.8' ],
+371 silly audit   '@humanfs/types': [ '0.15.0' ],
+371 silly audit   '@humanwhocodes/module-importer': [ '1.0.1' ],
+371 silly audit   '@humanwhocodes/retry': [ '0.4.3' ],
+371 silly audit   '@img/colour': [ '1.1.0' ],
+371 silly audit   '@img/sharp-darwin-arm64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-darwin-x64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-freebsd-wasm32': [ '0.35.4' ],
+371 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linux-arm': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linux-riscv64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linux-x64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.3.3' ],
+371 silly audit   '@img/sharp-linux-arm': [ '0.35.4' ],
+371 silly audit   '@img/sharp-linux-arm64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-linux-ppc64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-linux-riscv64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-linux-s390x': [ '0.35.4' ],
+371 silly audit   '@img/sharp-linux-x64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-linuxmusl-x64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-wasm32': [ '0.35.4' ],
+371 silly audit   '@img/sharp-webcontainers-wasm32': [ '0.35.4' ],
+371 silly audit   '@img/sharp-win32-arm64': [ '0.35.4' ],
+371 silly audit   '@img/sharp-win32-ia32': [ '0.35.4' ],
+371 silly audit   '@img/sharp-win32-x64': [ '0.35.4' ],
+371 silly audit   '@jridgewell/gen-mapping': [ '0.3.13' ],
+371 silly audit   '@jridgewell/remapping': [ '2.3.5' ],
+371 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+371 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.5' ],
+371 silly audit   '@jridgewell/trace-mapping': [ '0.3.31' ],
+371 silly audit   semver: [ '7.8.5', '6.3.1' ],
+371 silly audit   '@napi-rs/wasm-runtime': [ '1.2.3' ],
+371 silly audit   '@next/env': [ '16.3.3' ],
+371 silly audit   '@next/eslint-plugin-next': [ '16.3.3' ],
+371 silly audit   '@next/swc-darwin-arm64': [ '16.3.3' ],
+371 silly audit   '@next/swc-darwin-x64': [ '16.3.3' ],
+371 silly audit   '@next/swc-linux-arm64-gnu': [ '16.3.3' ],
+371 silly audit   '@next/swc-linux-arm64-musl': [ '16.3.3' ],
+371 silly audit   '@next/swc-linux-x64-gnu': [ '16.3.3' ],
+371 silly audit   '@next/swc-linux-x64-musl': [ '16.3.3' ],
+371 silly audit   '@next/swc-win32-arm64-msvc': [ '16.3.3' ],
+371 silly audit   '@next/swc-win32-x64-msvc': [ '16.3.3' ],
+371 silly audit   '@nodelib/fs.scandir': [ '2.1.5' ],
+371 silly audit   '@nodelib/fs.stat': [ '2.0.5' ],
+371 silly audit   '@nodelib/fs.walk': [ '1.2.8' ],
+371 silly audit   '@nolyfill/is-core-module': [ '1.0.39' ],
+371 silly audit   '@panva/hkdf': [ '1.2.1' ],
+371 silly audit   picomatch: [ '2.3.2', '4.0.7' ],
+371 silly audit   '@rtsao/scc': [ '1.1.0' ],
+371 silly audit   '@swc/helpers': [ '0.5.23' ],
+371 silly audit   '@tailwindcss/node': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.3.3' ],
+371 silly audit   '@tailwindcss/postcss': [ '4.3.3' ],
+371 silly audit   '@tybys/wasm-util': [ '0.10.3' ],
+371 silly audit   '@types/bcryptjs': [ '2.4.6' ],
+371 silly audit   '@types/estree': [ '1.0.9' ],
+371 silly audit   '@types/json-schema': [ '7.0.15' ],
+371 silly audit   '@types/json5': [ '0.0.29' ],
+371 silly audit   '@types/node': [ '20.19.43' ],
+371 silly audit   '@types/react': [ '19.2.18' ],
+371 silly audit   '@types/react-dom': [ '19.2.5' ],
+371 silly audit   '@typescript-eslint/eslint-plugin': [ '8.68.0' ],
+371 silly audit   ignore: [ '7.0.6', '5.3.2' ],
+371 silly audit   '@typescript-eslint/parser': [ '8.68.0' ],
+371 silly audit   '@typescript-eslint/project-service': [ '8.68.0' ],
+371 silly audit   '@typescript-eslint/scope-manager': [ '8.68.0' ],
+371 silly audit   '@typescript-eslint/tsconfig-utils': [ '8.68.0' ],
+371 silly audit   '@typescript-eslint/type-utils': [ '8.68.0' ],
+371 silly audit   '@typescript-eslint/types': [ '8.68.0' ],
+371 silly audit   '@typescript-eslint/typescript-estree': [ '8.68.0' ],
+371 silly audit   'balanced-match': [ '4.0.4', '1.0.2' ],
+371 silly audit   'brace-expansion': [ '5.0.9', '1.1.18' ],
+371 silly audit   minimatch: [ '10.2.6', '3.1.5' ],
+371 silly audit   '@typescript-eslint/utils': [ '8.68.0' ],
+371 silly audit   '@typescript-eslint/visitor-keys': [ '8.68.0' ],
+371 silly audit   '@unrs/resolver-binding-android-arm-eabi': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-android-arm64': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-darwin-arm64': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-darwin-x64': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-freebsd-x64': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-arm-gnueabihf': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-arm-musleabihf': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-arm64-gnu': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-arm64-musl': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-loong64-gnu': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-loong64-musl': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-ppc64-gnu': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-riscv64-gnu': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-riscv64-musl': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-s390x-gnu': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-x64-gnu': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-linux-x64-musl': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-openharmony-arm64': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-wasm32-wasi': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-win32-arm64-msvc': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-win32-ia32-msvc': [ '1.12.2' ],
+371 silly audit   '@unrs/resolver-binding-win32-x64-msvc': [ '1.12.2' ],
+371 silly audit   'resolve-from': [ '4.0.0' ],
+371 silly audit   acorn: [ '8.18.0' ],
+371 silly audit   'acorn-jsx': [ '5.3.2' ],
+371 silly audit   ajv: [ '6.15.0' ],
+371 silly audit   'fast-glob': [ '3.3.1' ],
+371 silly audit   'glob-parent': [ '5.1.2', '6.0.2' ],
+371 silly audit   argparse: [ '2.0.1' ],
+371 silly audit   'aria-query': [ '5.3.2' ],
+371 silly audit   'array-buffer-byte-length': [ '1.0.2' ],
+371 silly audit   'array-includes': [ '3.1.9' ],
+371 silly audit   'array.prototype.findlast': [ '1.2.5' ],
+371 silly audit   'array.prototype.findlastindex': [ '1.2.6' ],
+371 silly audit   'array.prototype.flat': [ '1.3.3' ],
+371 silly audit   'array.prototype.flatmap': [ '1.3.3' ],
+371 silly audit   'array.prototype.tosorted': [ '1.1.4' ],
+371 silly audit   'arraybuffer.prototype.slice': [ '1.0.4' ],
+371 silly audit   'ast-types-flow': [ '0.0.8' ],
+371 silly audit   'async-function': [ '1.0.0' ],
+371 silly audit   'available-typed-arrays': [ '1.0.7' ],
+371 silly audit   'axe-core': [ '4.13.0' ],
+371 silly audit   'axobject-query': [ '4.1.0' ],
+371 silly audit   'baseline-browser-mapping': [ '2.11.19' ],
+371 silly audit   bcryptjs: [ '3.0.3' ],
+371 silly audit   braces: [ '3.0.3' ],
+371 silly audit   browserslist: [ '4.28.8' ],
+371 silly audit   'call-bind': [ '1.0.9' ],
+371 silly audit   'call-bind-apply-helpers': [ '1.0.2' ],
+371 silly audit   'call-bound': [ '1.0.4' ],
+371 silly audit   callsites: [ '3.1.0' ],
+371 silly audit   'caniuse-lite': [ '1.0.30001810' ],
+371 silly audit   chalk: [ '4.1.2' ],
+371 silly audit   'client-only': [ '0.0.1' ],
+371 silly audit   'emoji-regex': [ '9.2.2' ],
+371 silly audit   'color-convert': [ '2.0.1' ],
+371 silly audit   'color-name': [ '1.1.4' ],
+371 silly audit   'concat-map': [ '0.0.1' ],
+371 silly audit   'convert-source-map': [ '2.0.0' ],
+371 silly audit   cookie: [ '0.7.2' ],
+371 silly audit   'cross-spawn': [ '7.0.6' ],
+371 silly audit   csstype: [ '3.2.3' ],
+371 silly audit   'damerau-levenshtein': [ '1.0.8' ],
+371 silly audit   'data-view-buffer': [ '1.0.2' ],
+371 silly audit   'data-view-byte-length': [ '1.0.2' ],
+371 silly audit   'data-view-byte-offset': [ '1.0.1' ],
+371 silly audit   debug: [ '4.4.3', '3.2.7' ],
+371 silly audit   'deep-is': [ '0.1.4' ],
+371 silly audit   'define-data-property': [ '1.1.4' ],
+371 silly audit   'define-properties': [ '1.2.1' ],
+371 silly audit   'detect-libc': [ '2.1.2' ],
+371 silly audit   doctrine: [ '2.1.0' ],
+371 silly audit   'dunder-proto': [ '1.0.1' ],
+371 silly audit   'electron-to-chromium': [ '1.5.415' ],
+371 silly audit   'enhanced-resolve': [ '5.24.5' ],
+371 silly audit   'es-abstract': [ '1.24.2' ],
+371 silly audit   'es-abstract-get': [ '1.0.0' ],
+371 silly audit   'es-define-property': [ '1.0.1' ],
+371 silly audit   'es-errors': [ '1.3.0' ],
+371 silly audit   'es-iterator-helpers': [ '1.4.0' ],
+371 silly audit   'es-object-atoms': [ '1.1.2' ],
+371 silly audit   'es-set-tostringtag': [ '2.1.0' ],
+371 silly audit   'es-shim-unscopables': [ '1.1.0' ],
+371 silly audit   'es-to-primitive': [ '1.3.4' ],
+371 silly audit   escalade: [ '3.2.0' ],
+371 silly audit   'escape-string-regexp': [ '4.0.0' ],
+371 silly audit   eslint: [ '9.39.5' ],
+371 silly audit   'eslint-config-next': [ '16.3.3' ],
+371 silly audit   globals: [ '16.4.0', '14.0.0' ],
+371 silly audit   'eslint-import-resolver-node': [ '0.3.10' ],
+371 silly audit   'eslint-import-resolver-typescript': [ '3.10.1' ],
+371 silly audit   'eslint-module-utils': [ '2.14.0' ],
+371 silly audit   'eslint-plugin-import': [ '2.32.0' ],
+371 silly audit   'eslint-plugin-jsx-a11y': [ '6.10.2' ],
+371 silly audit   'eslint-plugin-react': [ '7.37.5' ],
+371 silly audit   'eslint-plugin-react-hooks': [ '7.1.1' ],
+371 silly audit   'eslint-scope': [ '8.4.0' ],
+371 silly audit   espree: [ '10.4.0' ],
+371 silly audit   esquery: [ '1.7.0' ],
+371 silly audit   esrecurse: [ '4.3.0' ],
+371 silly audit   estraverse: [ '5.3.0' ],
+371 silly audit   esutils: [ '2.0.3' ],
+371 silly audit   'fast-deep-equal': [ '3.1.3' ],
+371 silly audit   'fast-json-stable-stringify': [ '2.1.0' ],
+371 silly audit   'fast-levenshtein': [ '2.0.6' ],
+371 silly audit   fastq: [ '1.20.1' ],
+371 silly audit   fdir: [ '6.5.0' ],
+371 silly audit   'file-entry-cache': [ '8.0.0' ],
+371 silly audit   'fill-range': [ '7.1.1' ],
+371 silly audit   'find-up': [ '5.0.0' ],
+371 silly audit   'flat-cache': [ '4.0.1' ],
+371 silly audit   flatted: [ '3.4.4' ],
+371 silly audit   'for-each': [ '0.3.5' ],
+371 silly audit   'function-bind': [ '1.1.2' ],
+371 silly audit   'function.prototype.name': [ '1.2.0' ],
+371 silly audit   'functions-have-names': [ '1.2.3' ],
+371 silly audit   'generator-function': [ '2.0.1' ],
+371 silly audit   gensync: [ '1.0.0-beta.2' ],
+371 silly audit   'get-intrinsic': [ '1.3.0' ],
+371 silly audit   'get-proto': [ '1.0.1' ],
+371 silly audit   'get-symbol-description': [ '1.1.0' ],
+371 silly audit   'get-tsconfig': [ '4.14.3' ],
+371 silly audit   globalthis: [ '1.0.4' ],
+371 silly audit   gopd: [ '1.2.0' ],
+371 silly audit   'graceful-fs': [ '4.2.11' ],
+371 silly audit   'has-bigints': [ '1.1.0' ],
+371 silly audit   'has-flag': [ '4.0.0' ],
+371 silly audit   'has-property-descriptors': [ '1.0.2' ],
+371 silly audit   'has-proto': [ '1.2.0' ],
+371 silly audit   'has-symbols': [ '1.1.0' ],
+371 silly audit   'has-tostringtag': [ '1.0.2' ],
+371 silly audit   hasown: [ '2.0.4' ],
+371 silly audit   'hermes-estree': [ '0.25.1' ],
+371 silly audit   'hermes-parser': [ '0.25.1' ],
+371 silly audit   'import-fresh': [ '3.3.1' ],
+371 silly audit   imurmurhash: [ '0.1.4' ],
+371 silly audit   'internal-slot': [ '1.1.0' ],
+371 silly audit   'is-array-buffer': [ '3.0.5' ],
+371 silly audit   'is-async-function': [ '2.1.1' ],
+371 silly audit   'is-bigint': [ '1.1.0' ],
+371 silly audit   'is-boolean-object': [ '1.2.2' ],
+371 silly audit   'is-bun-module': [ '2.0.0' ],
+371 silly audit   'is-callable': [ '1.2.7' ],
+371 silly audit   'is-core-module': [ '2.16.2' ],
+371 silly audit   'is-data-view': [ '1.0.2' ],
+371 silly audit   'is-date-object': [ '1.1.0' ],
+371 silly audit   'is-document.all': [ '1.0.0' ],
+371 silly audit   'is-extglob': [ '2.1.1' ],
+371 silly audit   'is-finalizationregistry': [ '1.1.1' ],
+371 silly audit   'is-generator-function': [ '1.1.2' ],
+371 silly audit   'is-glob': [ '4.0.3' ],
+371 silly audit   'is-map': [ '2.0.3' ],
+371 silly audit   'is-negative-zero': [ '2.0.3' ],
+371 silly audit   'is-number': [ '7.0.0' ],
+371 silly audit   'is-number-object': [ '1.1.1' ],
+371 silly audit   'is-regex': [ '1.2.1' ],
+371 silly audit   'is-set': [ '2.0.3' ],
+371 silly audit   'is-shared-array-buffer': [ '1.0.4' ],
+371 silly audit   'is-string': [ '1.1.1' ],
+371 silly audit   'is-symbol': [ '1.1.1' ],
+371 silly audit   'is-typed-array': [ '1.1.15' ],
+371 silly audit   'is-weakmap': [ '2.0.2' ],
+371 silly audit   'is-weakref': [ '1.1.1' ],
+371 silly audit   'is-weakset': [ '2.0.4' ],
+371 silly audit   isarray: [ '2.0.5' ],
+371 silly audit   isexe: [ '2.0.0' ],
+371 silly audit   'iterator.prototype': [ '1.1.5' ],
+371 silly audit   jiti: [ '2.7.0' ],
+371 silly audit   jose: [ '4.15.9' ],
+371 silly audit   'js-tokens': [ '4.0.0' ],
+371 silly audit   'js-yaml': [ '4.3.2' ],
+371 silly audit   jsesc: [ '3.1.0' ],
+371 silly audit   'json-buffer': [ '3.0.1' ],
+371 silly audit   'json-schema-traverse': [ '0.4.1' ],
+371 silly audit   'json-stable-stringify-without-jsonify': [ '1.0.1' ],
+371 silly audit   json5: [ '2.2.3', '1.0.2' ],
+371 silly audit   'jsx-ast-utils': [ '3.3.5' ],
+371 silly audit   keyv: [ '4.5.4' ],
+371 silly audit   'language-subtag-registry': [ '0.3.23' ],
+371 silly audit   'language-tags': [ '1.0.9' ],
+371 silly audit   levn: [ '0.4.1' ],
+371 silly audit   lightningcss: [ '1.32.0' ],
+371 silly audit   'lightningcss-android-arm64': [ '1.32.0' ],
+371 silly audit   'lightningcss-darwin-arm64': [ '1.32.0' ],
+371 silly audit   'lightningcss-darwin-x64': [ '1.32.0' ],
+371 silly audit   'lightningcss-freebsd-x64': [ '1.32.0' ],
+371 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.32.0' ],
+371 silly audit   'lightningcss-linux-arm64-gnu': [ '1.32.0' ],
+371 silly audit   'lightningcss-linux-arm64-musl': [ '1.32.0' ],
+371 silly audit   'lightningcss-linux-x64-gnu': [ '1.32.0' ],
+371 silly audit   'lightningcss-linux-x64-musl': [ '1.32.0' ],
+371 silly audit   'lightningcss-win32-arm64-msvc': [ '1.32.0' ],
+371 silly audit   'lightningcss-win32-x64-msvc': [ '1.32.0' ],
+371 silly audit   'locate-path': [ '6.0.0' ],
+371 silly audit   'lodash.merge': [ '4.6.2' ],
+371 silly audit   'loose-envify': [ '1.4.0' ],
+371 silly audit   'lru-cache': [ '5.1.1', '6.0.0' ],
+371 silly audit   'magic-string': [ '0.30.21' ],
+371 silly audit   'math-intrinsics': [ '1.1.0' ],
+371 silly audit   merge2: [ '1.4.1' ],
+371 silly audit   micromatch: [ '4.0.8' ],
+371 silly audit   minimist: [ '1.2.8' ],
+371 silly audit   ms: [ '2.1.3' ],
+371 silly audit   nanoid: [ '3.3.18' ],
+371 silly audit   'napi-postinstall': [ '0.3.4' ],
+371 silly audit   'natural-compare': [ '1.4.0' ],
+371 silly audit   next: [ '16.3.3' ],
+371 silly audit   'next-auth': [ '4.24.15' ],
+371 silly audit   postcss: [ '8.5.23', '8.5.26' ],
+371 silly audit   'node-exports-info': [ '1.6.2' ],
+371 silly audit   'node-releases': [ '2.0.54' ],
+371 silly audit   'path-key': [ '3.1.1' ],
+371 silly audit   oauth: [ '0.9.15' ],
+371 silly audit   'object-assign': [ '4.1.1' ],
+371 silly audit   'object-hash': [ '2.2.0' ],
+371 silly audit   'object-inspect': [ '1.13.4' ],
+371 silly audit   'object-keys': [ '1.1.1' ],
+371 silly audit   'object.assign': [ '4.1.7' ],
+371 silly audit   'object.entries': [ '1.1.9' ],
+371 silly audit   'object.fromentries': [ '2.0.8' ],
+371 silly audit   'object.groupby': [ '1.0.3' ],
+371 silly audit   'object.values': [ '1.2.1' ],
+371 silly audit   'oidc-token-hash': [ '5.2.0' ],
+371 silly audit   'openid-client': [ '5.7.1' ],
+371 silly audit   yallist: [ '4.0.0', '3.1.1' ],
+371 silly audit   optionator: [ '0.9.4' ],
+371 silly audit   'own-keys': [ '1.0.2' ],
+371 silly audit   'p-limit': [ '3.1.0' ],
+371 silly audit   'p-locate': [ '5.0.0' ],
+371 silly audit   'parent-module': [ '1.0.1' ],
+371 silly audit   'path-exists': [ '4.0.0' ],
+371 silly audit   'path-parse': [ '1.0.7' ],
+371 silly audit   picocolors: [ '1.1.1' ],
+371 silly audit   'possible-typed-array-names': [ '1.1.0' ],
+371 silly audit   preact: [ '10.29.8' ],
+371 silly audit   'preact-render-to-string': [ '5.2.6' ],
+371 silly audit   'prelude-ls': [ '1.2.1' ],
+371 silly audit   'pretty-format': [ '3.8.0' ],
+371 silly audit   'prop-types': [ '15.8.1' ],
+371 silly audit   punycode: [ '2.3.1' ],
+371 silly audit   'queue-microtask': [ '1.2.3' ],
+371 silly audit   react: [ '19.2.8' ],
+371 silly audit   'react-dom': [ '19.2.8' ],
+371 silly audit   'react-is': [ '16.13.1' ],
+371 silly audit   'reflect.getprototypeof': [ '1.0.10' ],
+371 silly audit   'regexp.prototype.flags': [ '1.5.4' ],
+371 silly audit   resolve: [ '2.0.0-next.7' ],
+371 silly audit   'resolve-pkg-maps': [ '1.0.0' ],
+371 silly audit   reusify: [ '1.1.0' ],
+371 silly audit   'run-parallel': [ '1.2.0' ],
+371 silly audit   'safe-array-concat': [ '1.1.4' ],
+371 silly audit   'safe-push-apply': [ '1.0.0' ],
+371 silly audit   'safe-regex-test': [ '1.1.0' ],
+371 silly audit   scheduler: [ '0.27.0' ],
+371 silly audit   'set-function-length': [ '1.2.2' ],
+371 silly audit   'set-function-name': [ '2.0.2' ],
+371 silly audit   'set-proto': [ '1.0.0' ],
+371 silly audit   sharp: [ '0.35.4' ],
+371 silly audit   'shebang-command': [ '2.0.0' ],
+371 silly audit   'shebang-regex': [ '3.0.0' ],
+371 silly audit   'side-channel': [ '1.1.1' ],
+371 silly audit   'side-channel-list': [ '1.0.1' ],
+371 silly audit   'side-channel-map': [ '1.0.1' ],
+371 silly audit   'side-channel-weakmap': [ '1.0.2' ],
+371 silly audit   'source-map-js': [ '1.2.1' ],
+371 silly audit   'stable-hash': [ '0.0.5' ],
+371 silly audit   'stop-iteration-iterator': [ '1.1.0' ],
+371 silly audit   'string.prototype.includes': [ '2.0.1' ],
+371 silly audit   'string.prototype.matchall': [ '4.0.12' ],
+371 silly audit   'string.prototype.repeat': [ '1.0.0' ],
+371 silly audit   'string.prototype.trim': [ '1.2.11' ],
+371 silly audit   'string.prototype.trimend': [ '1.0.10' ],
+371 silly audit   'string.prototype.trimstart': [ '1.0.8' ],
+371 silly audit   'strip-bom': [ '3.0.0' ],
+371 silly audit   'strip-json-comments': [ '3.1.1' ],
+371 silly audit   'styled-jsx': [ '5.1.6' ],
+371 silly audit   'supports-color': [ '7.2.0' ],
+371 silly audit   'supports-preserve-symlinks-flag': [ '1.0.0' ],
+371 silly audit   tailwindcss: [ '4.3.3' ],
+371 silly audit   tapable: [ '2.3.3' ],
+371 silly audit   tinyglobby: [ '0.2.17' ],
+371 silly audit   'to-regex-range': [ '5.0.1' ],
+371 silly audit   'ts-api-utils': [ '2.5.0' ],
+371 silly audit   'tsconfig-paths': [ '3.15.0' ],
+371 silly audit   tslib: [ '2.8.1' ],
+371 silly audit   'type-check': [ '0.4.0' ],
+371 silly audit   'typed-array-buffer': [ '1.0.3' ],
+371 silly audit   'typed-array-byte-length': [ '1.0.3' ],
+371 silly audit   'typed-array-byte-offset': [ '1.0.4' ],
+371 silly audit   'typed-array-length': [ '1.0.8' ],
+371 silly audit   typescript: [ '5.9.3' ],
+371 silly audit   'typescript-eslint': [ '8.68.0' ],
+371 silly audit   'unbox-primitive': [ '1.1.0' ],
+371 silly audit   'undici-types': [ '6.21.0' ],
+371 silly audit   'unrs-resolver': [ '1.12.2' ],
+371 silly audit   'update-browserslist-db': [ '1.3.2' ],
+371 silly audit   'uri-js': [ '4.4.1' ],
+371 silly audit   uuid: [ '11.1.1' ],
+371 silly audit   which: [ '2.0.2' ],
+371 silly audit   'which-boxed-primitive': [ '1.1.1' ],
+371 silly audit   'which-builtin-type': [ '1.2.1' ],
+371 silly audit   'which-collection': [ '1.0.2' ],
+371 silly audit   'which-typed-array': [ '1.1.22' ],
+371 silly audit   'word-wrap': [ '1.2.5' ],
+371 silly audit   'yocto-queue': [ '0.1.0' ],
+371 silly audit   zod: [ '4.4.3' ],
+371 silly audit   'zod-validation-error': [ '4.0.2' ],
+371 silly audit   '@prisma/client': [ '5.22.0' ],
+371 silly audit   prisma: [ '5.22.0' ],
+371 silly audit   '@prisma/engines': [ '5.22.0' ],
+371 silly audit   fsevents: [ '2.3.3' ],
+371 silly audit   '@prisma/debug': [ '5.22.0' ],
+371 silly audit   '@prisma/engines-version': [ '5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2' ],
+371 silly audit   '@prisma/fetch-engine': [ '5.22.0' ],
+371 silly audit   '@prisma/get-platform': [ '5.22.0' ]
+371 silly audit }
+372 http cache @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.22.0.tgz 0ms (cache hit)
+373 http cache @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-5.22.0.tgz 0ms (cache hit)
+374 http cache prisma@https://registry.npmjs.org/prisma/-/prisma-5.22.0.tgz 0ms (cache hit)
+375 http cache @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2.tgz 0ms (cache hit)
+376 http cache @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.22.0.tgz 0ms (cache hit)
+377 http cache fsevents@https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz 0ms (cache hit)
+378 http cache @prisma/client@https://registry.npmjs.org/@prisma/client/-/client-5.22.0.tgz 0ms (cache hit)
+379 http cache @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-5.22.0.tgz 0ms (cache hit)
+380 silly tarball no local data for @prisma/fetch-engine@https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.22.0.tgz. Extracting by manifest.
+381 silly tarball no local data for @prisma/engines@https://registry.npmjs.org/@prisma/engines/-/engines-5.22.0.tgz. Extracting by manifest.
+382 silly tarball no local data for prisma@https://registry.npmjs.org/prisma/-/prisma-5.22.0.tgz. Extracting by manifest.
+383 silly tarball no local data for @prisma/engines-version@https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2.tgz. Extracting by manifest.
+384 silly tarball no local data for fsevents@https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz. Extracting by manifest.
+385 silly tarball no local data for @prisma/get-platform@https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.22.0.tgz. Extracting by manifest.
+386 silly tarball no local data for @prisma/client@https://registry.npmjs.org/@prisma/client/-/client-5.22.0.tgz. Extracting by manifest.
+387 silly tarball no local data for @prisma/debug@https://registry.npmjs.org/@prisma/debug/-/debug-5.22.0.tgz. Extracting by manifest.
+388 http fetch GET 200 https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.22.0.tgz 56ms (cache miss)
+389 http fetch GET 200 https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz 83ms (cache miss)
+390 http fetch GET 200 https://registry.npmjs.org/@prisma/engines/-/engines-5.22.0.tgz 87ms (cache miss)
+391 http fetch GET 200 https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.22.0-44.605197351a3c8bdd595af2d2a9bc3025bca48ea2.tgz 88ms (cache miss)
+392 http fetch GET 200 https://registry.npmjs.org/@prisma/debug/-/debug-5.22.0.tgz 90ms (cache miss)
+393 http fetch GET 200 https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.22.0.tgz 136ms (cache miss)
+394 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 189ms
+395 silly audit report {}
+396 http fetch GET 200 https://registry.npmjs.org/@prisma/client/-/client-5.22.0.tgz 186ms (cache miss)
+397 http fetch GET 200 https://registry.npmjs.org/prisma/-/prisma-5.22.0.tgz 195ms (cache miss)
+398 info run prisma@5.22.0 preinstall node_modules/prisma node scripts/preinstall-entry.js
+399 info run prisma@5.22.0 preinstall { code: 0, signal: null }
+400 info run fsevents@2.3.3 install node_modules/fsevents node-gyp rebuild
+401 info run fsevents@2.3.3 install { code: 1, signal: null }
+402 verbose reify failed optional dependency /Users/hazael/Desktop/uniswap/node_modules/fsevents
+403 silly reify mark deleted [ '/Users/hazael/Desktop/uniswap/node_modules/fsevents' ]
+404 info run @prisma/client@5.22.0 postinstall node_modules/@prisma/client node scripts/postinstall.js
+405 info run @prisma/engines@5.22.0 postinstall node_modules/@prisma/engines node scripts/postinstall.js
+406 info run @prisma/engines@5.22.0 postinstall { code: 0, signal: null }
+407 info run @prisma/client@5.22.0 postinstall { code: 0, signal: null }
+408 silly ADD node_modules/@prisma/fetch-engine
+409 silly ADD node_modules/@prisma/engines-version
+410 silly ADD
+411 silly ADD node_modules/@prisma/engines
+412 silly REMOVE node_modules/zeptomatch
+413 silly REMOVE node_modules/yoga-layout
+414 silly REMOVE node_modules/yoctocolors
+415 silly REMOVE node_modules/yauzl
+416 silly REMOVE node_modules/yargs-parser
+417 silly REMOVE node_modules/yargs
+418 silly REMOVE node_modules/yaml
+419 silly REMOVE node_modules/y18n
+420 silly REMOVE node_modules/xml-naming
+421 silly REMOVE node_modules/wsl-utils
+422 silly REMOVE node_modules/wsl-utils/node_modules/powershell-utils
+423 silly REMOVE node_modules/ws
+424 silly REMOVE node_modules/wrap-ansi
+425 silly REMOVE node_modules/wrap-ansi/node_modules/ansi-styles
+426 silly REMOVE node_modules/workerd
+427 silly REMOVE node_modules/widest-line
+428 silly REMOVE node_modules/whatwg-url
+429 silly REMOVE node_modules/webidl-conversions
+430 silly REMOVE node_modules/vscode-languageserver-types
+431 silly REMOVE node_modules/vscode-languageserver-textdocument
+432 silly REMOVE node_modules/vscode-languageserver-protocol
+433 silly REMOVE node_modules/vscode-languageserver
+434 silly REMOVE node_modules/vscode-jsonrpc
+435 silly REMOVE node_modules/valibot
+436 silly REMOVE node_modules/util-deprecate
+437 silly REMOVE node_modules/universal-user-agent
+438 silly REMOVE node_modules/uniku
+439 silly REMOVE node_modules/unicorn-magic
+440 silly REMOVE node_modules/unenv
+441 silly REMOVE node_modules/undici
+442 silly REMOVE node_modules/type-fest
+443 silly REMOVE node_modules/typanion
+444 silly REMOVE node_modules/tr46
+445 silly REMOVE node_modules/tiny-invariant
+446 silly REMOVE node_modules/text-decoder
+447 silly REMOVE node_modules/terminal-size
+448 silly REMOVE node_modules/teex
+449 silly REMOVE node_modules/tar-stream
+450 silly REMOVE node_modules/tar
+451 silly REMOVE node_modules/tar/node_modules/yallist
+452 silly REMOVE node_modules/tagged-tag
+453 silly REMOVE node_modules/strnum
+454 silly REMOVE node_modules/strip-final-newline
+455 silly REMOVE node_modules/strip-ansi
+456 silly REMOVE node_modules/string-width
+457 silly REMOVE node_modules/string_decoder
+458 silly REMOVE node_modules/streamx
+459 silly REMOVE node_modules/std-env
+460 silly REMOVE node_modules/stack-utils
+461 silly REMOVE node_modules/stack-utils/node_modules/escape-string-regexp
+462 silly REMOVE node_modules/slice-ansi
+463 silly REMOVE node_modules/slice-ansi/node_modules/ansi-styles
+464 silly REMOVE node_modules/sisteransi
+465 silly REMOVE node_modules/signal-exit
+466 silly REMOVE node_modules/setimmediate
+467 silly REMOVE node_modules/safe-buffer
+468 silly REMOVE node_modules/run-applescript
+469 silly REMOVE node_modules/rolldown
+470 silly REMOVE node_modules/retry
+471 silly REMOVE node_modules/restore-cursor
+472 silly REMOVE node_modules/restore-cursor/node_modules/signal-exit
+473 silly REMOVE node_modules/remeda
+474 silly REMOVE node_modules/regexp-to-ast
+475 silly REMOVE node_modules/readdirp
+476 silly REMOVE node_modules/readable-stream
+477 silly REMOVE node_modules/readable-stream/node_modules/isarray
+478 silly REMOVE node_modules/react-reconciler
+479 silly REMOVE node_modules/rc9
+480 silly REMOVE node_modules/pure-rand
+481 silly REMOVE node_modules/proper-lockfile
+482 silly REMOVE node_modules/proper-lockfile/node_modules/signal-exit
+483 silly REMOVE node_modules/promise-limit
+484 silly REMOVE node_modules/process-nextick-args
+485 silly CHANGE node_modules/prisma
+486 silly REMOVE node_modules/pretty-ms
+487 silly REMOVE node_modules/prettier
+488 silly REMOVE node_modules/powershell-utils
+489 silly REMOVE node_modules/pkg-types
+490 silly REMOVE node_modules/perfect-debounce
+491 silly REMOVE node_modules/pend
+492 silly REMOVE node_modules/pathe
+493 silly REMOVE node_modules/path-scurry
+494 silly REMOVE node_modules/path-scurry/node_modules/lru-cache
+495 silly REMOVE node_modules/path-expression-matcher
+496 silly REMOVE node_modules/patch-console
+497 silly REMOVE node_modules/parse-ms
+498 silly REMOVE node_modules/pako
+499 silly REMOVE node_modules/package-manager-detector
+500 silly REMOVE node_modules/openapi-typescript-helpers
+501 silly REMOVE node_modules/openapi-fetch
+502 silly REMOVE node_modules/open
+503 silly REMOVE node_modules/onetime
+504 silly REMOVE node_modules/ohash
+505 silly REMOVE node_modules/npm-run-path
+506 silly REMOVE node_modules/npm-run-path/node_modules/path-key
+507 silly REMOVE node_modules/nopt
+508 silly REMOVE node_modules/node-gyp-build-optional-packages
+509 silly REMOVE node_modules/node-gyp-build
+510 silly REMOVE node_modules/node-fetch
+511 silly REMOVE node_modules/msgpackr-extract
+512 silly REMOVE node_modules/msgpackr
+513 silly REMOVE node_modules/modern-tar
+514 silly REMOVE node_modules/minizlib
+515 silly REMOVE node_modules/minipass
+516 silly REMOVE node_modules/mimic-fn
+517 silly REMOVE node_modules/magicast
+518 silly REMOVE node_modules/lodash
+519 silly REMOVE node_modules/lilconfig
+520 silly REMOVE node_modules/lie
+521 silly REMOVE node_modules/libsql
+522 silly REMOVE node_modules/libsql/node_modules/detect-libc
+523 silly REMOVE node_modules/libsodium-wrappers
+524 silly REMOVE node_modules/libsodium
+525 silly REMOVE node_modules/jszip
+526 silly REMOVE node_modules/jsonc-parser
+527 silly REMOVE node_modules/json-with-bigint
+528 silly REMOVE node_modules/js-base64
+529 silly REMOVE node_modules/jju
+530 silly REMOVE node_modules/is-wsl
+531 silly REMOVE node_modules/is-unsafe
+532 silly REMOVE node_modules/is-unicode-supported
+533 silly REMOVE node_modules/is-stream
+534 silly REMOVE node_modules/is-plain-obj
+535 silly REMOVE node_modules/is-inside-container
+536 silly REMOVE node_modules/is-in-ssh
+537 silly REMOVE node_modules/is-in-ci
+538 silly REMOVE node_modules/is-fullwidth-code-point
+539 silly REMOVE node_modules/is-docker
+540 silly REMOVE node_modules/ink
+541 silly REMOVE node_modules/ink/node_modules/wrap-ansi
+542 silly REMOVE node_modules/ink/node_modules/wrap-ansi/node_modules/string-width
+543 silly REMOVE node_modules/ink/node_modules/signal-exit
+544 silly REMOVE node_modules/ink/node_modules/emoji-regex
+545 silly REMOVE node_modules/ink/node_modules/chalk
+546 silly REMOVE node_modules/ink/node_modules/ansi-styles
+547 silly REMOVE node_modules/inherits
+548 silly REMOVE node_modules/indent-string
+549 silly REMOVE node_modules/immediate
+550 silly REMOVE node_modules/human-signals
+551 silly REMOVE node_modules/https-proxy-agent
+552 silly REMOVE node_modules/http-status-codes
+553 silly REMOVE node_modules/hono
+554 silly REMOVE node_modules/graphmatch
+555 silly REMOVE node_modules/grammex
+556 silly REMOVE node_modules/glob
+557 silly REMOVE node_modules/glob/node_modules/minimatch
+558 silly REMOVE node_modules/glob/node_modules/brace-expansion
+559 silly REMOVE node_modules/glob/node_modules/balanced-match
+560 silly REMOVE node_modules/giget
+561 silly REMOVE node_modules/get-stream
+562 silly REMOVE node_modules/get-port-please
+563 silly REMOVE node_modules/get-east-asian-width
+564 silly REMOVE node_modules/get-caller-file
+565 silly REMOVE node_modules/foreground-child
+566 silly REMOVE node_modules/file-uri-to-path
+567 silly REMOVE node_modules/figures
+568 silly REMOVE node_modules/fast-xml-parser
+569 silly REMOVE node_modules/fast-xml-builder
+570 silly REMOVE node_modules/fast-wrap-ansi
+571 silly REMOVE node_modules/fast-string-width
+572 silly REMOVE node_modules/fast-string-truncated-width
+573 silly REMOVE node_modules/fast-fifo
+574 silly REMOVE node_modules/fast-check
+575 silly REMOVE node_modules/exsolve
+576 silly REMOVE node_modules/execa
+577 silly REMOVE node_modules/events-universal
+578 silly REMOVE node_modules/estree-walker
+579 silly REMOVE node_modules/esbuild
+580 silly REMOVE node_modules/es-toolkit
+581 silly REMOVE node_modules/environment
+582 silly REMOVE node_modules/effect
+583 silly REMOVE node_modules/dotenv
+584 silly REMOVE node_modules/destr
+585 silly REMOVE node_modules/defu
+586 silly REMOVE node_modules/define-lazy-prop
+587 silly REMOVE node_modules/default-browser-id
+588 silly REMOVE node_modules/default-browser
+589 silly REMOVE node_modules/core-util-is
+590 silly REMOVE node_modules/convert-to-spaces
+591 silly REMOVE node_modules/content-type
+592 silly REMOVE node_modules/consola
+593 silly REMOVE node_modules/confbox
+594 silly REMOVE node_modules/colorette
+595 silly REMOVE node_modules/code-excerpt
+596 silly REMOVE node_modules/closest-match
+597 silly REMOVE node_modules/cliui
+598 silly REMOVE node_modules/cliui/node_modules/wrap-ansi
+599 silly REMOVE node_modules/cliui/node_modules/string-width
+600 silly REMOVE node_modules/cliui/node_modules/emoji-regex
+601 silly REMOVE node_modules/cliui/node_modules/ansi-styles
+602 silly REMOVE node_modules/clipanion
+603 silly REMOVE node_modules/cli-truncate
+604 silly REMOVE node_modules/cli-cursor
+605 silly REMOVE node_modules/cli-boxes
+606 silly REMOVE node_modules/ci-info
+607 silly REMOVE node_modules/chownr
+608 silly REMOVE node_modules/chokidar
+609 silly REMOVE node_modules/chevrotain
+610 silly REMOVE node_modules/capnweb
+611 silly REMOVE node_modules/capnp-es
+612 silly REMOVE node_modules/c12
+613 silly REMOVE node_modules/bundle-name
+614 silly REMOVE node_modules/bowser
+615 silly REMOVE node_modules/bindings
+616 silly REMOVE node_modules/better-result
+617 silly REMOVE node_modules/before-after-hook
+618 silly REMOVE node_modules/bare-url
+619 silly REMOVE node_modules/bare-stream
+620 silly REMOVE node_modules/bare-path
+621 silly REMOVE node_modules/bare-fs
+622 silly REMOVE node_modules/bare-events
+623 silly REMOVE node_modules/b4a
+624 silly REMOVE node_modules/aws4fetch
+625 silly REMOVE node_modules/auto-bind
+626 silly REMOVE node_modules/async-sema
+627 silly REMOVE node_modules/arktype
+628 silly REMOVE node_modules/arkregex
+629 silly REMOVE node_modules/anynum
+630 silly REMOVE node_modules/ansi-regex
+631 silly REMOVE node_modules/ansi-escapes
+632 silly REMOVE node_modules/alchemy
+633 silly REMOVE node_modules/alchemy/node_modules/picomatch
+634 silly REMOVE node_modules/alchemy/node_modules/glob-parent
+635 silly REMOVE node_modules/alchemy/node_modules/fast-glob
+636 silly REMOVE node_modules/alchemy/node_modules/@clack/prompts
+637 silly REMOVE node_modules/alchemy/node_modules/@clack/core
+638 silly REMOVE node_modules/agent-base
+639 silly REMOVE node_modules/acorn-import-attributes
+640 silly REMOVE node_modules/abbrev
+641 silly REMOVE node_modules/@vercel/nft
+642 silly REMOVE node_modules/@vercel/nft/node_modules/resolve-from
+643 silly REMOVE node_modules/@vercel/nft/node_modules/picomatch
+644 silly REMOVE node_modules/@vercel/detect-agent
+645 silly REMOVE node_modules/@types/ws
+646 silly REMOVE node_modules/@types/aws-lambda
+647 silly REMOVE node_modules/@stricli/core
+648 silly REMOVE node_modules/@standard-schema/spec
+649 silly REMOVE node_modules/@smithy/util-utf8
+650 silly REMOVE node_modules/@smithy/util-buffer-from
+651 silly REMOVE node_modules/@smithy/util-base64
+652 silly REMOVE node_modules/@smithy/types
+653 silly REMOVE node_modules/@smithy/signature-v4
+654 silly REMOVE node_modules/@smithy/shared-ini-file-loader
+655 silly REMOVE node_modules/@smithy/node-http-handler
+656 silly REMOVE node_modules/@smithy/node-config-provider
+657 silly REMOVE node_modules/@smithy/is-array-buffer
+658 silly REMOVE node_modules/@smithy/fetch-http-handler
+659 silly REMOVE node_modules/@smithy/credential-provider-imds
+660 silly REMOVE node_modules/@smithy/core
+661 silly REMOVE node_modules/@sindresorhus/merge-streams
+662 silly REMOVE node_modules/@sec-ant/readable-stream
+663 silly REMOVE node_modules/@rollup/pluginutils
+664 silly REMOVE node_modules/@rollup/pluginutils/node_modules/picomatch
+665 silly REMOVE node_modules/@rolldown/pluginutils
+666 silly REMOVE node_modules/@rolldown/binding-darwin-arm64
+667 silly REMOVE node_modules/@puppeteer/browsers
+668 silly REMOVE node_modules/@prisma/query-plan-executor
+669 silly REMOVE node_modules/@prisma/orm-toolchain
+670 silly REMOVE node_modules/@prisma/orm-framework
+671 silly REMOVE node_modules/@prisma/management-api-sdk
+672 silly CHANGE node_modules/@prisma/get-platform
+673 silly REMOVE node_modules/@prisma/dev
+674 silly CHANGE node_modules/@prisma/debug
+675 silly REMOVE node_modules/@prisma/compute-sdk
+676 silly REMOVE node_modules/@prisma/compute-sdk/node_modules/picomatch
+677 silly REMOVE node_modules/@prisma/composer-cli
+678 silly REMOVE node_modules/@prisma/composer
+679 silly REMOVE node_modules/@prisma/client-runtime-utils
+680 silly CHANGE node_modules/@prisma/client
+681 silly REMOVE node_modules/@prisma/cli-engine
+682 silly REMOVE node_modules/@oxc-project/types
+683 silly REMOVE node_modules/@octokit/webhooks-methods
+684 silly REMOVE node_modules/@octokit/webhooks
+685 silly REMOVE node_modules/@octokit/types
+686 silly REMOVE node_modules/@octokit/rest
+687 silly REMOVE node_modules/@octokit/request-error
+688 silly REMOVE node_modules/@octokit/request
+689 silly REMOVE node_modules/@octokit/plugin-rest-endpoint-methods
+690 silly REMOVE node_modules/@octokit/plugin-rest-endpoint-methods/node_modules/@octokit/types
+691 silly REMOVE node_modules/@octokit/plugin-rest-endpoint-methods/node_modules/@octokit/openapi-types
+692 silly REMOVE node_modules/@octokit/plugin-request-log
+693 silly REMOVE node_modules/@octokit/plugin-paginate-rest
+694 silly REMOVE node_modules/@octokit/plugin-paginate-rest/node_modules/@octokit/types
+695 silly REMOVE node_modules/@octokit/plugin-paginate-rest/node_modules/@octokit/openapi-types
+696 silly REMOVE node_modules/@octokit/openapi-webhooks-types
+697 silly REMOVE node_modules/@octokit/openapi-types
+698 silly REMOVE node_modules/@octokit/graphql
+699 silly REMOVE node_modules/@octokit/endpoint
+700 silly REMOVE node_modules/@octokit/core
+701 silly REMOVE node_modules/@octokit/auth-token
+702 silly REMOVE node_modules/@nodable/entities
+703 silly REMOVE node_modules/@noble/hashes
+704 silly REMOVE node_modules/@neon-rs/load
+705 silly REMOVE node_modules/@msgpackr-extract/msgpackr-extract-darwin-arm64
+706 silly REMOVE node_modules/@mrleebo/prisma-ast
+707 silly REMOVE node_modules/@mapbox/node-pre-gyp
+708 silly REMOVE node_modules/@mapbox/node-pre-gyp/node_modules/semver
+709 silly REMOVE node_modules/@manypkg/tools
+710 silly REMOVE node_modules/@libsql/isomorphic-ws
+711 silly REMOVE node_modules/@libsql/hrana-client
+712 silly REMOVE node_modules/@libsql/darwin-arm64
+713 silly REMOVE node_modules/@libsql/core
+714 silly REMOVE node_modules/@libsql/client
+715 silly REMOVE node_modules/@isaacs/fs-minipass
+716 silly REMOVE node_modules/@hono/node-server
+717 silly REMOVE node_modules/@esbuild/darwin-arm64
+718 silly REMOVE node_modules/@electric-sql/pglite-tools
+719 silly REMOVE node_modules/@electric-sql/pglite-socket
+720 silly REMOVE node_modules/@electric-sql/pglite
+721 silly REMOVE node_modules/@effect/vitest
+722 silly REMOVE node_modules/@effect/sql-sqlite-do
+723 silly REMOVE node_modules/@effect/sql-d1
+724 silly REMOVE node_modules/@distilled.cloud/planetscale
+725 silly REMOVE node_modules/@distilled.cloud/neon
+726 silly REMOVE node_modules/@distilled.cloud/hetzner
+727 silly REMOVE node_modules/@distilled.cloud/fly-io
+728 silly REMOVE node_modules/@distilled.cloud/core
+729 silly REMOVE node_modules/@distilled.cloud/cloudflare
+730 silly REMOVE node_modules/@distilled.cloud/axiom
+731 silly REMOVE node_modules/@distilled.cloud/aws
+732 silly REMOVE node_modules/@cloudflare/workers-types
+733 silly REMOVE node_modules/@cloudflare/workerd-darwin-arm64
+734 silly REMOVE node_modules/@cloudflare/unenv-preset
+735 silly REMOVE node_modules/@clack/prompts
+736 silly REMOVE node_modules/@clack/core
+737 silly REMOVE node_modules/@chevrotain/utils
+738 silly REMOVE node_modules/@chevrotain/types
+739 silly REMOVE node_modules/@chevrotain/gast
+740 silly REMOVE node_modules/@chevrotain/cst-dts-gen
+741 silly REMOVE node_modules/@aws/lambda-invoke-store
+742 silly REMOVE node_modules/@aws-sdk/xml-builder
+743 silly REMOVE node_modules/@aws-sdk/types
+744 silly REMOVE node_modules/@aws-sdk/token-providers
+745 silly REMOVE node_modules/@aws-sdk/signature-v4-multi-region
+746 silly REMOVE node_modules/@aws-sdk/nested-clients
+747 silly REMOVE node_modules/@aws-sdk/credential-providers
+748 silly REMOVE node_modules/@aws-sdk/credential-provider-web-identity
+749 silly REMOVE node_modules/@aws-sdk/credential-provider-sso
+750 silly REMOVE node_modules/@aws-sdk/credential-provider-process
+751 silly REMOVE node_modules/@aws-sdk/credential-provider-node
+752 silly REMOVE node_modules/@aws-sdk/credential-provider-login
+753 silly REMOVE node_modules/@aws-sdk/credential-provider-ini
+754 silly REMOVE node_modules/@aws-sdk/credential-provider-http
+755 silly REMOVE node_modules/@aws-sdk/credential-provider-env
+756 silly REMOVE node_modules/@aws-sdk/credential-provider-cognito-identity
+757 silly REMOVE node_modules/@aws-sdk/core
+758 silly REMOVE node_modules/@aws-crypto/util
+759 silly REMOVE node_modules/@aws-crypto/crc32
+760 silly REMOVE node_modules/@ark/util
+761 silly REMOVE node_modules/@ark/schema
+762 silly REMOVE node_modules/@alchemy.run/node-utils
+763 silly REMOVE node_modules/@alchemy.run/floci
+764 silly REMOVE node_modules/@alchemy.run/cloudflare-runtime
+765 silly REMOVE node_modules/@alcalzone/ansi-tokenize
+766 silly REMOVE node_modules/@alcalzone/ansi-tokenize/node_modules/ansi-styles
+767 warn allow-scripts 4 packages have install scripts not yet covered by allowScripts:
+767 warn allow-scripts   unrs-resolver@1.12.2 (postinstall: node postinstall.js)
+767 warn allow-scripts   @prisma/client@5.22.0 (postinstall: node scripts/postinstall.js)
+767 warn allow-scripts   prisma@5.22.0 (preinstall: node scripts/preinstall-entry.js)
+767 warn allow-scripts   @prisma/engines@5.22.0 (postinstall: node scripts/postinstall.js)
+767 warn allow-scripts
+767 warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+768 verbose cwd /Users/hazael/Desktop/uniswap
+769 verbose os Darwin 23.6.0
+770 verbose node v24.19.0
+771 verbose npm  v11.17.0
+772 verbose exit 0
+773 info ok
