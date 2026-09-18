@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#0f172a"/>
+  <rect x="50" y="50" width="500" height="500" rx="16" fill="#18181b"/>
+  <path d="M 220 160 L 380 160 L 370 480 L 310 480 L 300 280 L 290 480 L 230 480 Z" fill="#3f3f46" stroke="#71717a" stroke-width="4"/>
+  <text x="300" y="540" font-family="sans-serif" font-size="22" font-weight="bold" fill="#f8fafc" text-anchor="middle">Charcoal Grey Trousers</text>
+</svg>

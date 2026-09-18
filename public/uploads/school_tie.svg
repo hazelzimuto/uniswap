@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#0f172a"/>
+  <rect x="50" y="50" width="500" height="500" rx="16" fill="#1e1b4b"/>
+  <path d="M 270 140 L 330 140 L 340 180 L 300 200 L 260 180 Z" fill="#312e81"/><path d="M 270 200 L 330 200 L 350 420 L 300 480 L 250 420 Z" fill="#3730a3" stroke="#6366f1" stroke-width="4"/><line x1="260" y1="240" x2="340" y2="280" stroke="#fbbf24" stroke-width="8"/><line x1="260" y1="320" x2="340" y2="360" stroke="#fbbf24" stroke-width="8"/>
+  <text x="300" y="540" font-family="sans-serif" font-size="22" font-weight="bold" fill="#f8fafc" text-anchor="middle">DGS Striped School Tie</text>
+</svg>

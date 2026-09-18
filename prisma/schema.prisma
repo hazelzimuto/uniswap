@@ -1,113 +1,95 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
 generator client {
   provider = "prisma-client-js"
 }
 
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-
-enum ItemType {
-  BLAZER
-  JUMPER
-  SKIRT
-  TROUSERS
-  SHIRT
-  TIE
-  PE_KIT
-  SHOES
-  COAT
-  TRACKSUIT
-  OTHER
-}
-
-enum Gender {
-  BOYS
-  GIRLS
-  UNISEX
-}
-
-enum Condition {
-  AS_NEW
-  GOOD
-  FAIR
-}
-
-enum ListingType {
-  SALE
-  DONATION
-}
-
-enum ListingStatus {
-  ACTIVE
-  RESERVED
-  COMPLETED
-  REMOVED
-}
-
-enum ReservationStatus {
-  PENDING
-  CONFIRMED
-  EXPIRED
-}
-
 model School {
-  id        String    @id @default(uuid())
+  id        String    @id @default(cuid())
   name      String
   users     User[]
   listings  Listing[]
+  createdAt DateTime  @default(now())
 }
 
 model User {
-  id           String        @id @default(uuid())
-  email        String        @unique
-  passwordHash String
-  name         String
-  schoolId     String
-  isAdmin      Boolean       @default(false)
-  school       School        @relation(fields: [schoolId], references: [id])
-  listings     Listing[]
-  reservations Reservation[]
+  id            String          @id @default(cuid())
+  name          String
+  email         String          @unique
+  passwordHash  String
+  schoolId      String
+  school        School          @relation(fields: [schoolId], references: [id])
+  createdAt     DateTime        @default(now())
+  listings      Listing[]       @relation("SellerListings")
+  reservations  Reservation[]   @relation("BuyerReservations")
+  messages      Message[]       @relation("UserMessages")
+  buyerThreads  MessageThread[] @relation("BuyerThreads")
+  sellerThreads MessageThread[] @relation("SellerThreads")
 }
 
 model Listing {
-  id           String         @id @default(uuid())
-  sellerId     String
-  schoolId     String
-  itemType     ItemType
-  gender       Gender
-  size         String
-  condition    Condition
-  listingType  ListingType
-  priceInPence Int
-  status       ListingStatus  @default(ACTIVE)
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
-  
-  seller       User           @relation(fields: [sellerId], references: [id])
-  school       School         @relation(fields: [schoolId], references: [id])
-  images       ListingImage[]
-  reservations Reservation[]
+  id             String          @id @default(cuid())
+  sellerId       String
+  seller         User            @relation("SellerListings", fields: [sellerId], references: [id])
+  schoolId       String
+  school         School          @relation(fields: [schoolId], references: [id])
+  itemType       String          // BLAZER, JUMPER, SKIRT, TROUSERS, SHIRT, TIE, PE_KIT, SHOES, COAT, TRACKSUIT, OTHER
+  gender         String          // BOYS, GIRLS, UNISEX
+  size           String
+  condition      String          // AS_NEW, GOOD, FAIR
+  listingType    String          // SALE, DONATION
+  priceInPence   Int             @default(0)
+  status         String          @default("ACTIVE") // ACTIVE, RESERVED, COMPLETED, REMOVED
+  images         ListingImage[]
+  reservations   Reservation[]
+  messageThreads MessageThread[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
 }
 
 model ListingImage {
-  id         String  @id @default(uuid())
-  listingId  String
-  url        String
-  sortOrder  Int
-  
-  listing    Listing @relation(fields: [listingId], references: [id])
+  id        String   @id @default(cuid())
+  listingId String
+  listing   Listing  @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  url       String
+  sortOrder Int      @default(0)
 }
 
 model Reservation {
-  id          String            @id @default(uuid())
-  listingId   String
-  buyerId     String
-  status      ReservationStatus @default(PENDING)
-  expiresAt   DateTime
-  confirmedAt DateTime?
-  createdAt   DateTime          @default(now())
-  
-  listing     Listing           @relation(fields: [listingId], references: [id])
-  buyer       User              @relation(fields: [buyerId], references: [id])
+  id            String         @id @default(cuid())
+  listingId     String
+  listing       Listing        @relation(fields: [listingId], references: [id])
+  buyerId       String
+  buyer         User           @relation("BuyerReservations", fields: [buyerId], references: [id])
+  status        String         @default("ACTIVE") // ACTIVE, CANCELLED, COMPLETED
+  messageThread MessageThread?
+  createdAt     DateTime       @default(now())
+}
+
+model MessageThread {
+  id            String      @id @default(cuid())
+  reservationId String      @unique
+  reservation   Reservation @relation(fields: [reservationId], references: [id])
+  listingId     String
+  listing       Listing     @relation(fields: [listingId], references: [id])
+  buyerId       String
+  buyer         User        @relation("BuyerThreads", fields: [buyerId], references: [id])
+  sellerId      String
+  seller        User        @relation("SellerThreads", fields: [sellerId], references: [id])
+  isClosed      Boolean     @default(false)
+  messages      Message[]
+  createdAt     DateTime    @default(now())
+}
+
+model Message {
+  id        String        @id @default(cuid())
+  threadId  String
+  thread    MessageThread @relation(fields: [threadId], references: [id], onDelete: Cascade)
+  senderId  String
+  sender    User          @relation("UserMessages", fields: [senderId], references: [id])
+  body      String
+  createdAt DateTime      @default(now())
 }

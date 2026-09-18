@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#0f172a"/>
+  <rect x="50" y="50" width="500" height="500" rx="16" fill="#450a0a"/>
+  <path d="M 180 160 L 250 160 L 300 250 L 350 160 L 420 160 L 460 280 L 420 460 L 180 460 L 140 280 Z" fill="#881337" stroke="#e11d48" stroke-width="4"/>
+  <text x="300" y="540" font-family="sans-serif" font-size="22" font-weight="bold" fill="#f8fafc" text-anchor="middle">V-Neck Maroon Jumper</text>
+</svg>

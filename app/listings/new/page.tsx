@@ -1,126 +1,189 @@
-import { prisma } from "@/lib/prisma";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
-import { redirect } from "next/navigation";
-import { ItemType, Gender, Condition, ListingType, ListingStatus } from "@prisma/client";
-import { revalidatePath } from "next/cache";
+'use client';
 
-export default async function CreateListingPage() {
-  const session = await getServerSession(authOptions);
-  
-  if (!session?.user) {
-    redirect("/login");
-  }
+import { useActionState, useState } from 'react';
+import Link from 'next/link';
+import { createListingAction, ListingFormState } from '@/app/actions/listings';
+import { ITEM_TYPES, GENDERS, CONDITIONS, LISTING_TYPES } from '@/lib/types';
 
-  // Fetch user's school context
-  const user = await prisma.user.findUnique({
-    where: { email: session.user.email! }
-  });
+const initialState: ListingFormState = {};
 
-  if (!user) redirect("/login");
-
-  async function createListing(formData: FormData) {
-    "use server";
-    
-    const userSession = await getServerSession(authOptions);
-    if (!userSession?.user) throw new Error("Unauthorized");
-    
-    const dbUser = await prisma.user.findUnique({ where: { email: userSession.user.email! }});
-    
-    const itemType = formData.get("itemType") as ItemType;
-    const gender = formData.get("gender") as Gender;
-    const condition = formData.get("condition") as Condition;
-    const listingType = formData.get("listingType") as ListingType;
-    const size = formData.get("size") as string;
-    const priceStr = formData.get("price") as string;
-    const imageUrl = formData.get("imageUrl") as string;
-    
-    const priceInPence = listingType === 'SALE' ? Math.round(parseFloat(priceStr || "0") * 100) : 0;
-
-    const newListing = await prisma.listing.create({
-      data: {
-        sellerId: dbUser!.id,
-        schoolId: dbUser!.schoolId,
-        itemType,
-        gender,
-        size,
-        condition,
-        listingType,
-        priceInPence,
-        status: ListingStatus.ACTIVE,
-      }
-    });
-
-    if (imageUrl) {
-      await prisma.listingImage.create({
-        data: {
-          listingId: newListing.id,
-          url: imageUrl,
-          sortOrder: 1
-        }
-      });
-    }
-
-    revalidatePath("/listings");
-    redirect(`/listings/${newListing.id}`);
-  }
+export default function CreateListingPage() {
+  const [state, formAction, isPending] = useActionState(createListingAction, initialState);
+  const [listingType, setListingType] = useState<string>('SALE');
 
   return (
-    <div className="max-w-2xl mx-auto bg-white p-8 rounded shadow-md mt-6">
-      <h1 className="text-2xl font-bold mb-6">Create a Listing</h1>
-      <form action={createListing} className="space-y-6">
-        
-        <div className="grid grid-cols-2 gap-6">
-          <div>
-            <label className="block text-sm font-medium mb-1">Item Type</label>
-            <select name="itemType" required className="w-full border rounded p-2">
-              {Object.keys(ItemType).map(t => <option key={t} value={t}>{t}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Gender</label>
-            <select name="gender" required className="w-full border rounded p-2">
-              {Object.keys(Gender).map(g => <option key={g} value={g}>{g}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Condition</label>
-            <select name="condition" required className="w-full border rounded p-2">
-              {Object.keys(Condition).map(c => <option key={c} value={c}>{c}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Listing Type</label>
-            <select name="listingType" required className="w-full border rounded p-2">
-              <option value="SALE">Sale</option>
-              <option value="DONATION">Donation</option>
-            </select>
-          </div>
-        </div>
+    <div style={{ maxWidth: '600px', margin: '1rem auto' }}>
+      <div className="card">
+        <h1>List a Uniform Item</h1>
+        <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', marginBottom: '1.25rem' }}>
+          Put an outgrown uniform item up for sale or donation for other Derby Grammar School parents.
+        </p>
 
-        <div className="grid grid-cols-2 gap-6">
-          <div>
-            <label className="block text-sm font-medium mb-1">Size (e.g. 10, M, 32L)</label>
-            <input type="text" name="size" required className="w-full border rounded p-2" />
+        {state?.error && (
+          <div className="alert alert-danger" role="alert">
+            {state.error}
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">Price (£) (Leave blank if Donation)</label>
-            <input type="number" step="0.01" min="0" name="price" className="w-full border rounded p-2" placeholder="15.00" />
+        )}
+
+        <form action={formAction} encType="multipart/form-data">
+          {/* Privacy Warning Banner */}
+          <div className="alert alert-warning" style={{ fontSize: '0.88rem', lineHeight: '1.4' }}>
+            <strong>Privacy & Child Protection Notice:</strong> Listings must never contain a child's name, House, or photographs showing any child. Please ensure photos focus strictly on the item.
           </div>
-        </div>
 
-        <div>
-          <label className="block text-sm font-medium mb-1">Image URL (Mock Upload)</label>
-          <input type="url" name="imageUrl" className="w-full border rounded p-2" placeholder="https://placehold.co/400x400/png" />
-          <p className="text-xs text-gray-500 mt-1">For MVP, just paste any image URL.</p>
-        </div>
+          {/* Item Type */}
+          <div className="form-group">
+            <label className="form-label" htmlFor="itemType">
+              Item Type *
+            </label>
+            <select id="itemType" name="itemType" className="form-control" required defaultValue="">
+              <option value="" disabled>Select Item Type</option>
+              {ITEM_TYPES.map((t) => (
+                <option key={t.value} value={t.value}>
+                  {t.label}
+                </option>
+              ))}
+            </select>
+            {state?.fieldErrors?.itemType && (
+              <p className="form-error">{state.fieldErrors.itemType}</p>
+            )}
+          </div>
 
-        <div className="pt-4 border-t">
-          <button type="submit" className="w-full bg-blue-600 text-white font-bold p-3 rounded hover:bg-blue-700">
-            Publish Listing
-          </button>
-        </div>
-      </form>
+          {/* Gender */}
+          <div className="form-group">
+            <label className="form-label" htmlFor="gender">
+              Gender *
+            </label>
+            <select id="gender" name="gender" className="form-control" required defaultValue="">
+              <option value="" disabled>Select Gender</option>
+              {GENDERS.map((g) => (
+                <option key={g.value} value={g.value}>
+                  {g.label}
+                </option>
+              ))}
+            </select>
+            {state?.fieldErrors?.gender && (
+              <p className="form-error">{state.fieldErrors.gender}</p>
+            )}
+          </div>
+
+          {/* Size */}
+          <div className="form-group">
+            <label className="form-label" htmlFor="size">
+              Size *
+            </label>
+            <input
+              id="size"
+              name="size"
+              type="text"
+              className="form-control"
+              placeholder="e.g. Age 11-12 or Chest 32in"
+              required
+              maxLength={30}
+            />
+            <p className="form-help">School sizing varies (e.g. "Chest 32in", "Waist 28in", "Age 13-14").</p>
+            {state?.fieldErrors?.size && (
+              <p className="form-error">{state.fieldErrors.size}</p>
+            )}
+          </div>
+
+          {/* Condition */}
+          <div className="form-group">
+            <label className="form-label" htmlFor="condition">
+              Condition *
+            </label>
+            <select id="condition" name="condition" className="form-control" required defaultValue="">
+              <option value="" disabled>Select Condition</option>
+              {CONDITIONS.map((c) => (
+                <option key={c.value} value={c.value}>
+                  {c.label}
+                </option>
+              ))}
+            </select>
+            {state?.fieldErrors?.condition && (
+              <p className="form-error">{state.fieldErrors.condition}</p>
+            )}
+          </div>
+
+          {/* Listing Type */}
+          <div className="form-group">
+            <label className="form-label" htmlFor="listingType">
+              Listing Type *
+            </label>
+            <select
+              id="listingType"
+              name="listingType"
+              className="form-control"
+              value={listingType}
+              onChange={(e) => setListingType(e.target.value)}
+              required
+            >
+              {LISTING_TYPES.map((lt) => (
+                <option key={lt.value} value={lt.value}>
+                  {lt.label}
+                </option>
+              ))}
+            </select>
+            {state?.fieldErrors?.listingType && (
+              <p className="form-error">{state.fieldErrors.listingType}</p>
+            )}
+          </div>
+
+          {/* Price (Only if Sale) */}
+          {listingType === 'SALE' && (
+            <div className="form-group">
+              <label className="form-label" htmlFor="price">
+                Asking Price (£) *
+              </label>
+              <input
+                id="price"
+                name="price"
+                type="number"
+                step="0.50"
+                min="0.50"
+                max="500"
+                className="form-control"
+                placeholder="e.g. 15.00"
+                required
+              />
+              <p className="form-help">Between £0.50 and £500.00.</p>
+              {state?.fieldErrors?.price && (
+                <p className="form-error">{state.fieldErrors.price}</p>
+              )}
+            </div>
+          )}
+
+          {/* Photos Upload */}
+          <div className="form-group">
+            <label className="form-label" htmlFor="photos">
+              Item Photos (1–5 photos required) *
+            </label>
+            <input
+              id="photos"
+              name="photos"
+              type="file"
+              accept="image/jpeg,image/png,image/webp"
+              multiple
+              className="form-control"
+              required
+            />
+            <p className="form-help">Select 1 to 5 images (JPEG, PNG or WebP, max 5MB per file).</p>
+          </div>
+
+          <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1.5rem' }}>
+            <button
+              type="submit"
+              className="btn btn-primary btn-block"
+              disabled={isPending}
+            >
+              {isPending ? 'Publishing Item...' : 'Publish Listing'}
+            </button>
+            <Link href="/listings" className="btn btn-secondary">
+              Cancel
+            </Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

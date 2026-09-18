@@ -1,164 +1,195 @@
-import { prisma } from "@/lib/prisma";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
-import { notFound } from "next/navigation";
-import { revalidatePath } from "next/cache";
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { prisma } from '@/lib/prisma';
+import { getCurrentUser } from '@/lib/session';
+import { ITEM_TYPES, GENDERS, CONDITIONS } from '@/lib/types';
+import { reserveListingAction, completeReservationAction } from '@/app/actions/reservations';
+import { removeListingAction } from '@/app/actions/listings';
 
-export default async function ListingDetailPage({ params }: { params: { id: string } }) {
-  const session = await getServerSession(authOptions);
-  
+interface Props {
+  params: Promise<{
+    id: string;
+  }>;
+  searchParams: Promise<{
+    error?: string;
+  }>;
+}
+
+export default async function ListingDetailPage({ params, searchParams }: Props) {
+  const user = await getCurrentUser();
+  const { id } = await params;
+  const { error } = await searchParams;
+
   const listing = await prisma.listing.findUnique({
-    where: { id: params.id },
+    where: { id },
     include: {
-      images: { orderBy: { sortOrder: 'asc' } },
-      seller: { select: { id: true, name: true, email: true } },
-      school: true,
+      seller: true,
+      images: {
+        orderBy: { sortOrder: 'asc' },
+      },
       reservations: {
-        where: { status: 'PENDING' },
-        orderBy: { createdAt: 'desc' },
-        take: 1
-      }
-    }
+        where: { status: 'ACTIVE' },
+        include: { messageThread: true },
+      },
+    },
   });
 
-  if (!listing) return notFound();
-
-  // Check on read if it's expired
-  let isActive = listing.status === 'ACTIVE';
-  if (listing.status === 'RESERVED' && listing.reservations.length > 0) {
-    const activeReservation = listing.reservations[0];
-    if (activeReservation.expiresAt < new Date()) {
-      isActive = true;
-    }
+  if (!listing || listing.status === 'REMOVED') {
+    notFound();
   }
 
-  const isSeller = session?.user?.email === listing.seller.email;
+  const isSeller = user?.id === listing.sellerId;
+  const activeReservation = listing.reservations[0];
+  const isBuyerWhoReserved = activeReservation?.buyerId === user?.id;
 
-  async function reserveListing() {
-    "use server";
-    const userSession = await getServerSession(authOptions);
-    if (!userSession?.user) throw new Error("Not logged in");
-
-    const expiresAt = new Date();
-    expiresAt.setHours(expiresAt.getHours() + 48); // 48h expiry
-
-    await prisma.$transaction([
-      prisma.reservation.create({
-        data: {
-          listingId: listing!.id,
-          buyerId: (userSession.user as any).id,
-          expiresAt,
-          status: 'PENDING'
-        }
-      }),
-      prisma.listing.update({
-        where: { id: listing!.id },
-        data: { status: 'RESERVED' }
-      })
-    ]);
-
-    revalidatePath(`/listings/${listing!.id}`);
-    revalidatePath(`/listings`);
-  }
-
-  async function completeReservation() {
-    "use server";
-    const userSession = await getServerSession(authOptions);
-    if (!userSession?.user) throw new Error("Not logged in");
-
-    const pendingReservation = await prisma.reservation.findFirst({
-      where: { listingId: listing!.id, status: 'PENDING' }
-    });
-
-    if (!pendingReservation) throw new Error("No pending reservation");
-
-    await prisma.$transaction([
-      prisma.reservation.update({
-        where: { id: pendingReservation.id },
-        data: { status: 'CONFIRMED', confirmedAt: new Date() }
-      }),
-      prisma.listing.update({
-        where: { id: listing!.id },
-        data: { status: 'COMPLETED' }
-      })
-    ]);
-
-    revalidatePath(`/listings/${listing!.id}`);
-    revalidatePath(`/listings`);
-  }
+  const itemTypeLabel = ITEM_TYPES.find((t) => t.value === listing.itemType)?.label || listing.itemType;
+  const conditionLabel = CONDITIONS.find((c) => c.value === listing.condition)?.label || listing.condition;
+  const genderLabel = GENDERS.find((g) => g.value === listing.gender)?.label || listing.gender;
 
   return (
-    <div className="max-w-4xl mx-auto bg-white rounded shadow overflow-hidden">
-      <div className="md:flex">
-        <div className="md:w-1/2 bg-gray-100 min-h-[300px] flex items-center justify-center p-4">
+    <div style={{ maxWidth: '640px', margin: '1rem auto' }}>
+      <Link href="/listings" style={{ fontSize: '0.9rem', marginBottom: '1rem', display: 'inline-block' }}>
+        ← Back to all listings
+      </Link>
+
+      {error === 'own_listing' && (
+        <div className="alert alert-danger" role="alert">
+          You can't reserve your own listing.
+        </div>
+      )}
+
+      <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+        {/* Images Gallery */}
+        <div style={{ backgroundColor: '#e2e8f0', width: '100%', maxHeight: '420px', overflow: 'hidden', textAlign: 'center' }}>
           {listing.images.length > 0 ? (
-            <img src={listing.images[0].url} alt="Listing" className="max-w-full max-h-[400px] object-contain rounded" />
+            <img
+              src={listing.images[0].url}
+              alt={itemTypeLabel}
+              style={{ width: '100%', maxHeight: '420px', objectFit: 'contain' }}
+            />
           ) : (
-            <div className="text-gray-400">No Image Provided</div>
+            <div style={{ padding: '3rem 1rem', color: 'var(--text-muted)' }}>No Image</div>
           )}
         </div>
-        <div className="p-8 md:w-1/2 flex flex-col justify-between">
-          <div>
-            <div className="uppercase tracking-wide text-sm text-blue-600 font-semibold mb-1">
-              {listing.listingType} • {listing.condition.replace('_', ' ')}
-            </div>
-            <h1 className="block mt-1 text-3xl leading-tight font-bold text-black">
-              {listing.itemType}
-            </h1>
-            <p className="mt-2 text-gray-500">{listing.school.name}</p>
-            
-            <div className="mt-4 grid grid-cols-2 gap-4 text-sm text-gray-700">
-              <div>
-                <span className="font-bold text-gray-900 block">Gender</span>
-                {listing.gender}
-              </div>
-              <div>
-                <span className="font-bold text-gray-900 block">Size</span>
-                {listing.size}
-              </div>
-              <div>
-                <span className="font-bold text-gray-900 block">Seller</span>
-                {listing.seller.name}
-              </div>
-              <div>
-                <span className="font-bold text-gray-900 block">Status</span>
-                <span className={`px-2 py-1 rounded text-xs font-medium text-white ${isActive ? 'bg-green-500' : listing.status === 'COMPLETED' ? 'bg-gray-500' : 'bg-orange-500'}`}>
-                  {isActive ? 'ACTIVE' : listing.status}
-                </span>
-              </div>
+
+        {/* Thumbnail gallery if multiple */}
+        {listing.images.length > 1 && (
+          <div style={{ display: 'flex', gap: '0.5rem', padding: '0.5rem 1rem', background: 'var(--bg-subtle)' }}>
+            {listing.images.map((img, idx) => (
+              <img
+                key={img.id}
+                src={img.url}
+                alt={`Photo ${idx + 1}`}
+                style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '4px', border: '1px solid var(--border)' }}
+              />
+            ))}
+          </div>
+        )}
+
+        <div style={{ padding: '1.5rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1rem' }}>
+            <div>
+              <h1 style={{ marginBottom: '0.25rem' }}>{itemTypeLabel}</h1>
+              <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                Listed by {listing.seller.name} • Derby Grammar School
+              </p>
             </div>
 
-            <div className="mt-6 text-3xl font-bold text-gray-900">
-              {listing.listingType === 'SALE' ? `£${(listing.priceInPence / 100).toFixed(2)}` : 'FREE'}
+            <div>
+              {listing.status === 'ACTIVE' && (
+                listing.listingType === 'DONATION' ? (
+                  <span className="badge badge-donation" style={{ fontSize: '0.9rem', padding: '0.35rem 0.75rem' }}>Free Donation</span>
+                ) : (
+                  <span className="badge badge-sale" style={{ fontSize: '0.9rem', padding: '0.35rem 0.75rem' }}>
+                    £{(listing.priceInPence / 100).toFixed(2)}
+                  </span>
+                )
+              )}
+              {listing.status === 'RESERVED' && (
+                <span className="badge badge-reserved" style={{ fontSize: '0.9rem', padding: '0.35rem 0.75rem' }}>Reserved</span>
+              )}
+              {listing.status === 'COMPLETED' && (
+                <span className="badge badge-completed" style={{ fontSize: '0.9rem', padding: '0.35rem 0.75rem' }}>Completed</span>
+              )}
             </div>
           </div>
 
-          <div className="mt-8">
-            {!session && (
-              <p className="text-sm text-gray-500 italic">Please log in to reserve this item.</p>
-            )}
-            
-            {session && !isSeller && isActive && (
-              <form action={reserveListing}>
-                <button type="submit" className="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded hover:bg-blue-700">
-                  Reserve Item (48 hours)
+          {/* Structured Fields */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', background: 'var(--bg-subtle)', padding: '1rem', borderRadius: '6px', marginBottom: '1.5rem' }}>
+            <div>
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block' }}>SIZE</span>
+              <strong style={{ fontSize: '1.05rem' }}>{listing.size}</strong>
+            </div>
+            <div>
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block' }}>GENDER</span>
+              <strong style={{ fontSize: '1.05rem' }}>{genderLabel}</strong>
+            </div>
+            <div>
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block' }}>CONDITION</span>
+              <strong style={{ fontSize: '1.05rem' }}>{conditionLabel}</strong>
+            </div>
+            <div>
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block' }}>PRICE / TYPE</span>
+              <strong style={{ fontSize: '1.05rem' }}>
+                {listing.listingType === 'DONATION' ? 'Free Donation' : `£${(listing.priceInPence / 100).toFixed(2)}`}
+              </strong>
+            </div>
+          </div>
+
+          {/* Action Buttons */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            {/* 1. Buyer & Active: Reserve */}
+            {!isSeller && listing.status === 'ACTIVE' && (
+              <form action={reserveListingAction}>
+                <input type="hidden" name="listingId" value={listing.id} />
+                <button type="submit" className="btn btn-primary btn-block" style={{ fontSize: '1.1rem', padding: '0.85rem' }}>
+                  Reserve Item
                 </button>
               </form>
             )}
 
-            {session && isSeller && listing.status === 'RESERVED' && !isActive && (
-              <div className="bg-orange-50 p-4 border border-orange-200 rounded">
-                <p className="text-sm text-orange-800 mb-3 font-medium">This item is currently reserved. Have you completed the exchange with the buyer?</p>
-                <form action={completeReservation}>
-                  <button type="submit" className="w-full bg-green-600 text-white font-bold py-2 px-4 rounded hover:bg-green-700">
-                    Mark as Completed
+            {/* 2. Seller & Active: Edit / Remove */}
+            {isSeller && listing.status === 'ACTIVE' && (
+              <div style={{ display: 'flex', gap: '0.75rem' }}>
+                <Link href={`/listings/${listing.id}/edit`} className="btn btn-secondary" style={{ flex: 1 }}>
+                  Edit Listing
+                </Link>
+                <form action={removeListingAction} style={{ flex: 1 }} onSubmit={(e) => {
+                  if (!confirm('Are you sure you want to remove this listing?')) e.preventDefault();
+                }}>
+                  <input type="hidden" name="listingId" value={listing.id} />
+                  <button type="submit" className="btn btn-danger btn-block">
+                    Remove Listing
                   </button>
                 </form>
               </div>
             )}
-            
-            {session && isSeller && isActive && (
-              <div className="text-sm text-gray-500 italic">You are the seller of this item.</div>
+
+            {/* 3. Reserved State Actions */}
+            {listing.status === 'RESERVED' && (
+              <>
+                {isBuyerWhoReserved && activeReservation?.messageThread && (
+                  <Link href={`/messages/${activeReservation.messageThread.id}`} className="btn btn-primary btn-block">
+                    💬 View Message Thread with Seller
+                  </Link>
+                )}
+
+                {isSeller && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                    {activeReservation?.messageThread && (
+                      <Link href={`/messages/${activeReservation.messageThread.id}`} className="btn btn-secondary btn-block">
+                        💬 Open Conversation with Buyer
+                      </Link>
+                    )}
+                    <form action={completeReservationAction}>
+                      <input type="hidden" name="listingId" value={listing.id} />
+                      <button type="submit" className="btn btn-primary btn-block">
+                        Mark as Handover Completed
+                      </button>
+                    </form>
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>

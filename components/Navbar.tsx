@@ -1,42 +1,53 @@
-import Link from "next/link";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import Link from 'next/link';
+import { getCurrentUser } from '@/lib/session';
+import { logoutAction } from '@/app/actions/auth';
 
 export default async function Navbar() {
-  const session = await getServerSession(authOptions);
+  const user = await getCurrentUser();
 
   return (
-    <nav className="bg-white shadow-md p-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">
-          UniSwap
-        </Link>
-        <div className="flex space-x-4">
-          <Link href="/listings" className="text-gray-600 hover:text-black">
-            Browse
+    <header className="header">
+      <div className="nav-container">
+        <div>
+          <Link href={user ? "/listings" : "/"} className="brand">
+            UniSwap
           </Link>
-          {session ? (
+          <span className="school-tag">Derby Grammar School</span>
+        </div>
+
+        <nav className="nav-links">
+          {user ? (
             <>
-              <Link href="/listings/new" className="text-gray-600 hover:text-black">
-                Sell / Donate
+              <Link href="/listings" className="nav-link">
+                Browse
               </Link>
-              <div className="text-gray-600">Hi, {session.user?.name}</div>
-              <Link href="/api/auth/signout" className="text-red-500 hover:text-red-700">
-                Logout
+              <Link href="/listings/new" className="nav-link">
+                List an item
               </Link>
+              <Link href="/my-items" className="nav-link">
+                My items
+              </Link>
+              <Link href="/messages" className="nav-link">
+                Messages
+              </Link>
+              <form action={logoutAction} style={{ display: 'inline' }}>
+                <button type="submit" className="nav-button">
+                  Log out ({user.name.split(' ')[0]})
+                </button>
+              </form>
             </>
           ) : (
             <>
-              <Link href="/login" className="text-blue-500 hover:text-blue-700">
-                Login
+              <Link href="/login" className="nav-link">
+                Log in
               </Link>
-              <Link href="/register" className="text-blue-500 hover:text-blue-700">
+              <Link href="/register" className="btn btn-primary" style={{ padding: '0.4rem 0.8rem', fontSize: '0.9rem' }}>
                 Register
               </Link>
             </>
           )}
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
